@@ -18,8 +18,10 @@ if type hub > /dev/null 2>&1; then
 fi
 
 # phpenv
-export PATH="$HOME/.phpenv/bin:$PATH"
-eval "$(phpenv init -)"
+if type phpenv > /dev/null 2>&1; then
+	export PATH="$HOME/.phpenv/bin:$PATH"
+	eval "$(phpenv init -)"
+fi
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
