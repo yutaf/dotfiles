@@ -12,8 +12,10 @@ alias lsd='ls -ld'
 source ~/.git-completion.sh # for git-completion
 
 # hub
-eval "$(hub alias -s)"
-source ~/hub.bash_completion.sh
+if type hub > /dev/null 2>&1; then
+	eval "$(hub alias -s)"
+	source ~/hub.bash_completion.sh
+fi
 
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
