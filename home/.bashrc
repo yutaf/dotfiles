@@ -14,7 +14,7 @@ source ~/.git-completion.sh # for git-completion
 # hub
 if type hub > /dev/null 2>&1; then
 	eval "$(hub alias -s)"
-	source ~/hub.bash_completion.sh
+	source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
 fi
 
 # phpenv
