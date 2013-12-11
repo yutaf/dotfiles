@@ -1,0 +1,15 @@
+[user]
+	email = yutafuji2008@gmail.com
+	name = yutaf
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+	whitespace = cr-at-eol
+	pager = less -+S
+	trustctime = false
+[color]
+	ui = auto
+[web]
+	browser = ch
+[browser "ch"]
+	cmd = open -a \"/Applications/Google Chrome.app\"
