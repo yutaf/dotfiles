@@ -1,3 +1,4 @@
+" neobundle
 scriptencoding utf-8
 set nocompatible
 
@@ -5,8 +6,8 @@ if has('vim_starting')
   filetype plugin off
   filetype indent off
   execute 'set runtimepath+=' . expand('~/.vim/bundle/neobundle.vim')
-  call neobundle#rc(expand('~/.vim/bundle'))
 endif
+call neobundle#rc(expand('~/.vim/bundle'))
 
 NeoBundle 'git://github.com/kien/ctrlp.vim.git'
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
@@ -16,6 +17,7 @@ NeoBundle 'git://github.com/scrooloose/syntastic.git'
 filetype plugin on
 filetype indent on
 
+" mouse
 set mouse=n
 set mouse=i
 set mouse=c
