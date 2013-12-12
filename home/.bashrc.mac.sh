@@ -16,7 +16,9 @@ source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 
 # shortcut for ssh
 alias sshroot='ssh root@192.168.0.140'
+alias sshfujishiro='ssh fujishiro@192.168.0.140'
 alias sshdev='ssh yuta@192.168.0.210'
+
 # shortcut
 alias cot='open -a CotEditor'
 alias coda='open -a Coda'
