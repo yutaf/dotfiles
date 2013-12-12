@@ -14,3 +14,4 @@ PATH="$PATH":/usr/local/mysql/bin:/usr/local/php-5.4.10/bin
 # for shortcut
 alias lsZ='ls -lZ'
 alias lsdZ='ls -ldZ'
+alias listusers="cut -d: -f1 /etc/passwd"
