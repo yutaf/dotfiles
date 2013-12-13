@@ -1,21 +1,22 @@
-" neobundle
-scriptencoding utf-8
-set nocompatible
-
+" NeoBundle
 if has('vim_starting')
-  filetype plugin off
-  filetype indent off
-  execute 'set runtimepath+=' . expand('~/.vim/bundle/neobundle.vim')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#rc(expand('~/.vim/bundle'))
 
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
 NeoBundle 'git://github.com/kien/ctrlp.vim.git'
-NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 
 filetype plugin on
 filetype indent on
+
+" Installation check.
+NeoBundleCheck
 
 " mouse
 set mouse=n
