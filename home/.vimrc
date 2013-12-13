@@ -15,9 +15,6 @@ NeoBundle 'git://github.com/scrooloose/syntastic.git'
 filetype plugin on
 filetype indent on
 
-" Installation check.
-NeoBundleCheck
-
 " mouse
 set mouse=n
 set mouse=i
