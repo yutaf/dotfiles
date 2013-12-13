@@ -1,0 +1,2 @@
+home/.vim/bundle/*
+!.vim/bundle/neobundle.vim
