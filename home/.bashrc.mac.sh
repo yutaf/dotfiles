@@ -9,6 +9,9 @@ export PATH="$HOME/.phpenv/shims:$PATH"
 if [ `hostname` = "yutafuji2008MacBookPro.local" ]; then
 	# 会社mac
 	export PATH=/usr/local/apache-httpd-2.2.24/bin:$PATH  # for apache
+elif [ `hostname` = "utafMacBookPro.local" ]; then
+	# 自宅mac
+	export PATH=/usr/local/apache-httpd-2.2.25/bin:$PATH  # for apache
 fi
 
 # for Homebrew completion
