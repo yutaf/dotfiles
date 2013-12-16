@@ -7,10 +7,10 @@ export PATH=/usr/local/opt/openssl/bin:$PATH # for brew openssl
 export PATH="$HOME/.phpenv/shims:$PATH"
 
 if [ `hostname` = "yutafuji2008MacBookPro.local" ]; then
-	# 会社mac
+	# office
 	export PATH=/usr/local/apache-httpd-2.2.24/bin:$PATH  # for apache
 elif [ `hostname` = "utafMacBookPro.local" ]; then
-	# 自宅mac
+	# home
 	export PATH=/usr/local/apache-httpd-2.2.25/bin:$PATH  # for apache
 fi
 
