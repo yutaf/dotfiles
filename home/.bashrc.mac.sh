@@ -3,19 +3,14 @@ export PATH=/usr/local/sbin:$PATH # for Homebrew
 export PATH=/usr/local/bin:$PATH  # for Homebrew
 export PATH=~/bin:$PATH
 export PATH=/usr/local/opt/openssl/bin:$PATH # for brew openssl
-#todo remove php53-mcrypt(:依存関係のphp53)をダウンロードしないようにする phpmyadminに必要？
-export PATH="$HOME/.phpenv/shims:$PATH"
 
-if [ `hostname` = "yutafuji2008MacBookPro.local" ]; then
-	# office
-	export PATH=/usr/local/apache-httpd-2.2.24/bin:$PATH  # for apache
-elif [ `hostname` = "utafMacBookPro.local" ]; then
-	# home
+if [ `hostname` = "utafMacBookPro.local" ]; then
+	#todo move to .bash_profile
 	export PATH=/usr/local/apache-httpd-2.2.25/bin:$PATH  # for apache
 fi
 
 # for Homebrew completion
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh 
+source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 
 # shortcut for ssh
 alias sshroot='ssh root@192.168.0.140'
