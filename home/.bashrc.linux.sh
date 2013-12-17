@@ -17,17 +17,9 @@ CentOSInfo=`find /etc -maxdepth 1 -type f -name *release | xargs grep -l "CentOS
 if [ "${#CentOSInfo}" -ne 0 ]; then
 	# Check CentOS major version
 	RESULT=`echo $CentOSInfo | grep -e "\ 6\.\?[0-9]\?"`
-	echo ${#RESULT}
 	if [ "${#RESULT}" -eq 0 ]; then
-		echo here
+		# When the major version is lower than 6
 		`git config --global http.sslVerify false`
-	fi
-
-	VERSION=`echo $CentOSInfo | grep -o -e "[0-9]\?\.[0-9]\?"`
-	MAJOR_VERSION=`echo $CentOSInfo | grep -o -e "[0-9]\?\.[0-9]\?" | cut -c 1`
-	echo $MAJOR_VERSION
-	if [ "$MAJOR_VERSION" != 6 ]; then
-		echo $MAJOR_VERSION
 	fi
 fi
 
