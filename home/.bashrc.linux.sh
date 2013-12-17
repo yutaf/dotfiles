@@ -20,6 +20,7 @@ if [ "${#CentOSInfo}" -ne 0 ]; then
 	echo ${#RESULT}
 	if [ "${#RESULT}" -eq 0 ]; then
 		echo here
+		`git config --global http.sslVerify false`
 	fi
 
 	VERSION=`echo $CentOSInfo | grep -o -e "[0-9]\?\.[0-9]\?"`
