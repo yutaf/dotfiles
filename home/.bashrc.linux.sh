@@ -16,7 +16,7 @@ alias listusers="cut -d: -f1 /etc/passwd"
 CentOSInfo=`find /etc -maxdepth 1 -type f -name *release | xargs grep -l "CentOS" | xargs less`
 if [ "${#CentOSInfo}" -ne 0 ]; then
 	# CentOS
-	RESULT=`echo $CentOSInfo | grep -e "6\.\?[0-9]\?" | cut -c 1`
+	RESULT=`echo $CentOSInfo | grep -e "\ 6\.\?[0-9]\?"`
 	echo $RESULT
 
 	VERSION=`echo $CentOSInfo | grep -o -e "[0-9]\?\.[0-9]\?"`
