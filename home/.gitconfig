@@ -13,3 +13,5 @@
 	browser = ch
 [browser "ch"]
 	cmd = open -a \"/Applications/Google Chrome.app\"
+[push]
+	default = upstream
