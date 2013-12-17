@@ -6,7 +6,6 @@ Including NeoBundle as a git submodule
 https://github.com/Shougo/neobundle.vim 
 ### NOTICE ###
 * Vim 7.2.051 or later required
-* Fix `PATH` in home/.bashrc.linux.sh, home/.bashrc.mac.sh as your environment
 
 ## how to initialize
 1. Install homesick  
