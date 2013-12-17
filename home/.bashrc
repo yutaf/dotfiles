@@ -18,15 +18,17 @@ if type hub > /dev/null 2>&1; then
 fi
 
 # phpenv
-if type phpenv > /dev/null 2>&1; then
+if [ -e $HOME/.phpenv ]; then
 	export PATH="$HOME/.phpenv/bin:$PATH"
 	eval "$(phpenv init -)"
+	# phpenv php takes priority (for iterm)
+	export PATH="$HOME/.phpenv/shims:$PATH"
 fi
 
 # rbenv
-if type rbenv > /dev/null 2>&1; then
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -e $HOME/.rbenv ]; then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
 fi
 
 if [ `uname` = "Darwin" ]; then
