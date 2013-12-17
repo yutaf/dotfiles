@@ -1,9 +1,12 @@
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+. /etc/bashrc
 fi
 
 # User specific aliases and functions
+if [ -f $HOME/.user.sh ]; then
+. $HOME/.user.sh
+fi
 #alias rm='rm -i'
 #alias cp='cp -i'
 #alias mv='mv -i'
