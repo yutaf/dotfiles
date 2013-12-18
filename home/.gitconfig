@@ -17,3 +17,5 @@
 	default = upstream
 [http]
 	sslVerify = false
+[receive]
+	denyDeleteCurrent = warn
