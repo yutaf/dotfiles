@@ -31,12 +31,12 @@ if [ -e $HOME/.rbenv ]; then
 	eval "$(rbenv init -)"
 fi
 
+if [ -f $HOME/.user.sh ]; then
+. $HOME/.user.sh
+fi
+
 if [ `uname` = "Darwin" ]; then
 	source ~/.bashrc.mac.sh
 elif [ `uname` = "Linux" ]; then
 	source ~/.bashrc.linux.sh
-fi
-
-if [ -f $HOME/.user.sh ]; then
-. $HOME/.user.sh
 fi
