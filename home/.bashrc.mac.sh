@@ -4,11 +4,6 @@ export PATH=/usr/local/bin:$PATH  # for Homebrew
 export PATH=~/bin:$PATH
 export PATH=/usr/local/opt/openssl/bin:$PATH # for brew openssl
 
-if [ `hostname` = "utafMacBookPro.local" ]; then
-	#todo move to .bash_profile
-	export PATH=/usr/local/apache-httpd-2.2.25/bin:$PATH  # for apache
-fi
-
 # for Homebrew completion
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 
