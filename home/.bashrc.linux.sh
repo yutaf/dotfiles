@@ -13,9 +13,8 @@ alias lsZ='ls -lZ'
 alias lsdZ='ls -ldZ'
 alias listusers="cut -d: -f1 /etc/passwd"
 
-# CentOS6以外は git http.sslVerify を false にするようにしたが、
-# .gitconfig の扱いが複雑になるので、一旦コメントアウト
-# デフォルトで http.sslVerify false にする
+# Set http.sslVerify false as common default
+# instead of getting this below comment out
 : <<'#COMMENT'
 CentOSInfo=`find /etc -maxdepth 1 -type f -name *release | xargs grep -l "CentOS" | xargs less`
 if [ "${#CentOSInfo}" -ne 0 ]; then
