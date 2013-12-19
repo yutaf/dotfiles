@@ -1,6 +1,6 @@
 # dotfiles
 
-This is managed with homesick  
+Supposed to be managed with homesick  
 https://github.com/technicalpickles/homesick  
 Including NeoBundle as a git submodule  
 https://github.com/Shougo/neobundle.vim 
@@ -19,5 +19,6 @@ https://github.com/Shougo/neobundle.vim
 4. Install NeoBundles  
   `$ vim`  
   `:NeoBundleInstall`
-
+5. (optional)Create and Edit ~/.user.sh
+  i.e. Write $PATH, alias or something which you don't wanna publish or which stick to its own environment
 That's all.
