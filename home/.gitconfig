@@ -19,3 +19,5 @@
 	sslVerify = false
 [receive]
 	denyDeleteCurrent = warn
+[merge]
+	ff = false
