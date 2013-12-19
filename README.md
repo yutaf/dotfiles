@@ -20,5 +20,8 @@ https://github.com/Shougo/neobundle.vim
   `$ vim`  
   `:NeoBundleInstall`
 5. (optional)Create and Edit ~/.user.sh
-  i.e. Write $PATH, alias or something which you don't wanna publish or which stick to its own environment
+  i.e. Write $PATH, alias or something  
+  which you don't wanna publish  
+  or which stick to its own environment  
+
 That's all.
