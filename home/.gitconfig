@@ -1,6 +1,3 @@
-[user]
-	email = yutafuji2008@gmail.com
-	name = yutaf
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
@@ -21,3 +18,5 @@
 	denyDeleteCurrent = warn
 [merge]
 	ff = false
+[include]
+	path = .gitconfig.local
