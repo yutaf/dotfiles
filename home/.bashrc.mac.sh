@@ -2,7 +2,6 @@
 export PATH=/usr/local/sbin:$PATH # for Homebrew
 export PATH=/usr/local/bin:$PATH  # for Homebrew
 export PATH=~/bin:$PATH
-export PATH=/usr/local/opt/openssl/bin:$PATH # for brew openssl
 
 # for Homebrew completion
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
