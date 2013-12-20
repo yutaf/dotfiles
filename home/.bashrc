@@ -8,8 +8,12 @@ alias lsl='ls -l'
 alias lsa='ls -al'
 alias lsd='ls -ld'
 
-# Completion
-source ~/.git-completion.sh # for git-completion
+# git-completion
+source ~/.git-completion.sh
+# git-prompt
+source ~/.git-prompt.sh
+# Terminal Prompt
+PS1="\n\`if [ \$? = 0 ]; then echo \[\e[32m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` (\`if [ \$(uname) = "Linux" ]; then echo \u@; fi\`\h:\w)\n* "
 
 # hub
 if type hub > /dev/null 2>&1; then
