@@ -3,14 +3,9 @@ export PATH=/usr/local/sbin:$PATH # for Homebrew
 export PATH=/usr/local/bin:$PATH  # for Homebrew
 export PATH=~/bin:$PATH
 
-# for Homebrew completion
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
-
-# shortcut for ssh
-alias sshroot='ssh root@192.168.0.140'
-alias sshfujishiro='ssh fujishiro@192.168.0.140'
-alias sshgit='ssh git@192.168.0.140'
-alias sshdev='ssh yuta@192.168.0.210'
+# completion
+source `brew --prefix`/Library/Contributions/brew_bash_completion.sh # Homebrew
+source `brew --prefix`/etc/bash_completion # bash
 
 # shortcut
 alias cot='open -a CotEditor'
