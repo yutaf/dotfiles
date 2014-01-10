@@ -22,6 +22,9 @@ set mouse=c
 set mouse=h
 set mouse=r
 
+" backspace
+set backspace=start,eol
+
 " Syntax Highlight for BLACK background color
 syntax on
 highlight Normal ctermbg=black ctermfg=grey
