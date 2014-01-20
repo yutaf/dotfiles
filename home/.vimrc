@@ -41,6 +41,14 @@ set list
 highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
 highlight JpSpace cterm=underline ctermfg=7 guifg=7
 
+" tab key
+set tabstop=4
+set expandtab
+
+" autoindent
+set autoindent
+set shiftwidth=4
+
 " ステータスラインを表示
 set laststatus=2 " ステータスラインを常に表示
 set statusline=%F%r%h%= " ステータスラインの内容
