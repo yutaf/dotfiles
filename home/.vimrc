@@ -46,7 +46,7 @@ set tabstop=4
 set expandtab
 
 " autoindent
-set autoindent
+"set autoindent
 set shiftwidth=4
 
 " ステータスラインを表示
