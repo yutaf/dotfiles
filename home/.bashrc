@@ -36,8 +36,8 @@ if [ -e $HOME/.rbenv ]; then
 	eval "$(rbenv init -)"
 fi
 
-if [ -f $HOME/.user.sh ]; then
-. $HOME/.user.sh
+if [ -f $HOME/.bashrc.user.sh ]; then
+. $HOME/.bashrc.user.sh
 fi
 
 if [ `uname` = "Darwin" ]; then
