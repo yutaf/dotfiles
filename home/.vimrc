@@ -52,6 +52,9 @@ set shiftwidth=4
 " autocmd 自動コメントアウト
 autocmd FileType * setlocal formatoptions-=ro
 
+" 検索の折り返しをしない
+set nowrapscan
+
 " ステータスラインを表示
 set laststatus=2 " ステータスラインを常に表示
 set statusline=%F%r%h%= " ステータスラインの内容
