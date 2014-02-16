@@ -7,6 +7,10 @@ export PATH=~/bin:$PATH
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh # Homebrew
 source `brew --prefix`/etc/bash_completion # bash
 
+# color less
+export LESS='-R'
+export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s' # installed by brew
+
 # shortcut
 alias cot='open -a CotEditor'
 alias coda='open -a Coda'
