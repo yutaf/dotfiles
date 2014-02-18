@@ -12,6 +12,7 @@ export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s' # installed by brew
 
 # shortcut
+alias ls='gls --color=auto'
 alias cot='open -a CotEditor'
 alias coda='open -a Coda'
 alias safari='open -a safari'

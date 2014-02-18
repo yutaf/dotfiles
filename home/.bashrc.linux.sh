@@ -9,6 +9,7 @@ fi
 #alias mv='mv -i'
 
 # for shortcut
+alias ls='ls --color=auto'
 alias lsZ='ls -lZ'
 alias lsdZ='ls -ldZ'
 alias listusers="cut -d: -f1 /etc/passwd"

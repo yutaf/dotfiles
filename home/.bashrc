@@ -1,13 +1,3 @@
-# shortcut
-alias up='cd ..'
-alias upp='cd ../..'
-alias uppp='cd ../../..'
-alias upppp='cd ../../../..'
-alias uppppp='cd ../../../../..'
-alias lsl='ls -l'
-alias lsa='ls -al'
-alias lsd='ls -ld'
-
 # git-completion
 source ~/.git-completion.sh
 # git-prompt
@@ -29,6 +19,9 @@ man() {
         LESS_TERMCAP_us=$(printf "\e[1;32m") \
         man "$@"
 }
+
+# dircolors-solarized
+eval $(gdircolors ~/.dircolors-solarized)
 
 # hub
 if type hub > /dev/null 2>&1; then
@@ -60,3 +53,13 @@ if [ `uname` = "Darwin" ]; then
 elif [ `uname` = "Linux" ]; then
 	source ~/.bashrc.linux.sh   # for linux
 fi
+
+# shortcut
+alias up='cd ..'
+alias upp='cd ../..'
+alias uppp='cd ../../..'
+alias upppp='cd ../../../..'
+alias uppppp='cd ../../../../..'
+alias lsl='ls -l'
+alias lsa='ls -al'
+alias lsd='ls -ld'
