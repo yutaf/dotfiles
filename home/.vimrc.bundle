@@ -8,12 +8,14 @@ call neobundle#rc(expand('~/.vim/bundle'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'kien/ctrlp.vim.git'
-NeoBundle 'scrooloose/nerdtree.git'
-NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'tpope/vim-surround.git'
-NeoBundle 'mattn/emmet-vim.git'
-NeoBundle 'vim-scripts/YankRing.vim.git'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'vim-scripts/closetag.vim'
+NeoBundle 'nishigori/vim-php-dictionary'
+NeoBundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on

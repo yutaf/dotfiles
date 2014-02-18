@@ -17,11 +17,17 @@ set mouse=r
 " backspace
 set backspace=start,eol
 
+" colorscheme
+syntax enable
+set background=dark
+colorscheme solarized
+
 " Syntax Highlight for BLACK background color
-syntax on
-highlight Normal ctermbg=black ctermfg=grey
-highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
-highlight CursorLine term=none cterm=none ctermfg=black ctermbg=grey
+"syntax on
+"highlight Normal ctermbg=black ctermfg=grey
+"highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
+"highlight CursorLine term=none cterm=none ctermfg=black ctermbg=grey
+
 set cursorline
 
 " Show line nunber
