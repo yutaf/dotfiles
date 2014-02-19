@@ -2,7 +2,7 @@
 	excludesfile = ~/.gitignore
 	editor = vim
 	whitespace = cr-at-eol
-	pager = less -+S
+	pager = less -SX
 	trustctime = false
 [color]
 	ui = auto
