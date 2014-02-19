@@ -23,5 +23,4 @@
 [pull]
 	rebase = true
 [alias]
-	statussb = status --short --branch
-	diffcw = diff --color-words
+[alias]
