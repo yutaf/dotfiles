@@ -20,9 +20,6 @@ man() {
         man "$@"
 }
 
-# dircolors-solarized
-eval $(gdircolors ~/.dircolors-solarized)
-
 # hub
 if type hub > /dev/null 2>&1; then
 	eval "$(hub alias -s)"
@@ -53,6 +50,9 @@ if [ `uname` = "Darwin" ]; then
 elif [ `uname` = "Linux" ]; then
 	source ~/.bashrc.linux.sh   # for linux
 fi
+
+# dircolors-solarized
+eval $(dircolors ~/.dircolors-solarized)
 
 # shortcut
 alias up='cd ..'
