@@ -55,7 +55,7 @@ fi
 eval $(dircolors ~/.dircolors-solarized)
 
 # shortcut
-alias cd='pushd'
+#alias cd='pushd'
 alias up='cd ..'
 alias upp='cd ../..'
 alias uppp='cd ../../..'
