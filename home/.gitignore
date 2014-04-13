@@ -1,3 +1,19 @@
+## OSX
 .DS_Store
-*.sw[po]
+# Icon must ends with two \r.
+Icon
+
+
+# Thumbnails
+._*
+
+## vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+## PHPStorm
 .idea
