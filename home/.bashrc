@@ -1,10 +1,12 @@
-# git-completion
-source ~/.git-completion.sh
-# git-prompt
-source ~/.git-prompt.sh
-GIT_PS1_SHOWDIRTYSTATE=true
-# Terminal Prompt
-PS1="\n\`if [ \$? = 0 ]; then echo \[\e[32m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` (\`if [ \$(uname) = "Linux" ]; then echo \u@; fi\`\h:\w\$(__git_ps1))\n* "
+if [ -f ~/.git-completion ]; then
+    . ~/.git-completion.sh
+fi
+if [ -f ~/.git-prompt.sh ]; then
+    . ~/.git-prompt.sh
+    GIT_PS1_SHOWDIRTYSTATE=true
+    # Terminal Prompt
+    PS1="\n\`if [ \$? = 0 ]; then echo \[\e[32m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` (\`if [ \$(uname) = "Linux" ]; then echo \u@; fi\`\h:\w\$(__git_ps1))\n* "
+fi
 
 # color man
 export MANPAGER='less -R'
@@ -22,33 +24,33 @@ man() {
 
 # hub
 if type hub > /dev/null 2>&1; then
-	eval "$(hub alias -s)"
-	source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
+    eval "$(hub alias -s)"
+    source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
 fi
 
 # phpenv
 if [ -e $HOME/.phpenv ]; then
-	export PATH="$HOME/.phpenv/bin:$PATH"
-	eval "$(phpenv init -)"
-	# phpenv php takes priority (for iterm)
-	export PATH="$HOME/.phpenv/shims:$PATH"
+    export PATH="$HOME/.phpenv/bin:$PATH"
+    eval "$(phpenv init -)"
+    # phpenv php takes priority (for iterm)
+    export PATH="$HOME/.phpenv/shims:$PATH"
 fi
 
 # rbenv
 if [ -e $HOME/.rbenv ]; then
-	export PATH="$HOME/.rbenv/bin:$PATH"
-	eval "$(rbenv init -)"
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
 fi
 
 # for user own environment
 if [ -f $HOME/.bashrc.user.sh ]; then
-. $HOME/.bashrc.user.sh
+    . $HOME/.bashrc.user.sh
 fi
 
 if [ `uname` = "Darwin" ]; then
-	source ~/.bashrc.mac.sh     # for mac
+    . ~/.bashrc.mac.sh     # for mac
 elif [ `uname` = "Linux" ]; then
-	source ~/.bashrc.linux.sh   # for linux
+    . ~/.bashrc.linux.sh   # for linux
 fi
 
 # dircolors-solarized
