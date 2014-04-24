@@ -25,3 +25,6 @@
 	rebase = true
 [alias]
 [alias]
+[alias]
+	s = status --short --branch
+	d = diff --color-words
