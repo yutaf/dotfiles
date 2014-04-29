@@ -19,6 +19,7 @@
 	denyDeleteCurrent = warn
 [merge]
 	ff = false
+	tool = vimdiff
 [include]
 	path = .gitconfig.local
 [pull]
@@ -28,3 +29,4 @@
 [alias]
 	s = status --short --branch
 	d = diff --color-words
+	b = branch -a
