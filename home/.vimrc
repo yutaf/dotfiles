@@ -58,4 +58,4 @@ set laststatus=2 " ステータスラインを常に表示
 set statusline=%F%r%h%= " ステータスラインの内容
 
 " クリップボード
-set clipboard+=unnamed
+"set clipboard+=unnamed
