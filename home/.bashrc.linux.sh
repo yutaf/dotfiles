@@ -10,8 +10,8 @@ fi
 
 # for shortcut
 alias ls='ls --color=auto'
-alias lsZ='ls -lZ'
-alias lsdZ='ls -ldZ'
+alias llZ='ls -lZ'
+alias lldZ='ls -ldZ'
 alias listusers="cut -d: -f1 /etc/passwd"
 
 # some other PATHs for commands installed system globally
