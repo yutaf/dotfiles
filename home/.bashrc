@@ -1,11 +1,16 @@
+# git-completion
 if [ -f ~/.git-completion ]; then
     . ~/.git-completion.sh
 fi
+
+# prompt
 if [ -f ~/.git-prompt.sh ]; then
     . ~/.git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
     # Terminal Prompt
     PS1="\n\`if [ \$? = 0 ]; then echo \[\e[32m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` (\`if [ \$(uname) = "Linux" ]; then echo \u@; fi\`\h:\w\$(__git_ps1))\n* "
+else
+    PS1="\n\`if [ \$? = 0 ]; then echo \[\e[32m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\` (\`if [ \$(uname) = "Linux" ]; then echo \u@; fi\`\h:\w)\n* "
 fi
 
 # color man
