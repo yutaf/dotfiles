@@ -17,5 +17,6 @@ NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'vim-scripts/closetag.vim'
 NeoBundle 'nishigori/vim-php-dictionary'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
