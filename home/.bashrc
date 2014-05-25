@@ -45,6 +45,8 @@ fi
 if [ -e $HOME/.rbenv ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
+    # to use rbenv ruby
+    export PATH=$HOME/.rbenv/shims:$PATH
 fi
 
 # for user own environment
