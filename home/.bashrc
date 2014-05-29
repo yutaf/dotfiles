@@ -61,7 +61,9 @@ elif [ `uname` = "Linux" ]; then
 fi
 
 # dircolors-solarized
-eval $(dircolors ~/.dircolors-solarized)
+if [ -r ~/.dircolors-solarized ]; then
+    eval $(dircolors ~/.dircolors-solarized)
+fi
 
 # shortcut
 #alias cd='pushd'
