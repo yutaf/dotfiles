@@ -31,3 +31,6 @@
 	d = diff --color-words
 	b = branch -a
 	ce = commit --allow-empty
+[pager]
+	diff = diff-highlight | less -rX
+	log = diff-highlight | less -rX
