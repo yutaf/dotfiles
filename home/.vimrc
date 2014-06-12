@@ -59,3 +59,6 @@ set statusline=%F%r%h%= " ステータスラインの内容
 
 " クリップボード
 "set clipboard+=unnamed
+
+" alphabet increment
+set nf=alpha
