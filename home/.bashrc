@@ -2,6 +2,10 @@
 if [ -f ~/.git-completion ]; then
     . ~/.git-completion.sh
 fi
+# aws-cli completion
+if type aws > /dev/null 2>&1; then
+    complete -C aws_completer aws
+fi
 
 # prompt
 if [ -f ~/.git-prompt.sh ]; then
