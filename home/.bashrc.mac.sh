@@ -7,7 +7,7 @@ export PATH=~/bin:$PATH
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh # Homebrew
 source `brew --prefix`/etc/bash_completion # bash
 if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
-    source `brew --prefix`/etc/bash_completion.d/vagrant
+    . `brew --prefix`/etc/bash_completion.d/vagrant
 fi
 
 # color less
