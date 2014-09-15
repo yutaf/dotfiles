@@ -1,6 +1,6 @@
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+  . /etc/bashrc
 fi
 
 # User specific aliases and functions
@@ -22,11 +22,11 @@ alias listusers="cut -d: -f1 /etc/passwd"
 : <<'#COMMENT'
 CentOSInfo=`find /etc -maxdepth 1 -type f -name *release | xargs grep -l "CentOS" | xargs less`
 if [ "${#CentOSInfo}" -ne 0 ]; then
-    # Check CentOS major version
-    RESULT=`echo $CentOSInfo | grep -e "\ 6\.\?[0-9]\?"`
-    if [ "${#RESULT}" -eq 0 ]; then
-        # When the major version is lower than 6
-        `git config --global http.sslVerify false`
-    fi
+  # Check CentOS major version
+  RESULT=`echo $CentOSInfo | grep -e "\ 6\.\?[0-9]\?"`
+  if [ "${#RESULT}" -eq 0 ]; then
+      # When the major version is lower than 6
+      `git config --global http.sslVerify false`
+  fi
 fi
 #COMMENT
