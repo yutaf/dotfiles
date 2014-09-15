@@ -10,6 +10,11 @@ if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
     . `brew --prefix`/etc/bash_completion.d/vagrant
 fi
 
+# direnv
+if type direnv > /dev/null 2>&1; then
+    eval "$(direnv hook bash)"
+fi
+
 # color less
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s' # installed by brew
