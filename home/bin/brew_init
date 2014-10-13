@@ -68,7 +68,6 @@ brew tap caskroom/versions 2> /dev/null || true
 # apps
 apps=(
   appcleaner
-  slack
 )
 #TODO
 #apps=(
