@@ -1,7 +1,5 @@
 # Path
-export PATH=/usr/local/sbin:$PATH # for Homebrew
-export PATH=/usr/local/bin:$PATH  # for Homebrew
-export PATH=~/bin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH # for Homebrew
 
 # completion
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh # Homebrew
