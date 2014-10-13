@@ -16,8 +16,10 @@ if type direnv > /dev/null 2>&1; then
 fi
 
 # color less
-export LESS='-R'
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s' # installed by brew
+if type source-highlight > /dev/null 2>&1; then
+  export LESS='-R'
+  export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s' # installed by brew
+fi
 
 #--
 # shortcut
