@@ -2,11 +2,14 @@
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH # for Homebrew
 
 # completion
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh # Homebrew
-source `brew --prefix`/etc/bash_completion # bash
-if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
-  . `brew --prefix`/etc/bash_completion.d/vagrant
-fi
+completions=(
+  $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
+  $(brew --prefix)/etc/bash_completion
+  $(brew --prefix)/etc/bash_completion.d/vagrant
+)
+for completion in ${completions[@]}; do
+  . $completion
+done
 
 # direnv
 if type direnv > /dev/null 2>&1; then
