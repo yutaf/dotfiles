@@ -1,0 +1,93 @@
+#!/bin/sh
+
+if ! type brew > /dev/null 2>&1; then
+  echo "Installing homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Update homebrew
+#brew update && brew upgrade
+
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils 2> /dev/null || true
+
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils 2> /dev/null || true
+
+# Install GNU `sed`
+brew install gnu-sed 2> /dev/null || true
+
+# tap
+taps=(
+  homebrew/dupes
+  homebrew/versions
+  homebrew/completions
+  peco/peco
+)
+
+for tap in ${taps[@]}; do
+  brew tap $tap 2> /dev/null || true
+done
+
+# Install other useful binaries
+binaries=(
+  bash-completion
+  vagrant-completion
+
+  direnv
+  jq
+  nkf
+  peco
+  pwgen
+  rename
+  rmtrash
+  tree
+  wget
+
+  git
+  git-flow
+  hub
+  tig
+
+  vim
+
+  node
+
+  autoconf
+)
+
+# Install the binaries
+brew install ${binaries[@]} 2> /dev/null || true
+
+# Install homebrew-cask
+brew install caskroom/cask/brew-cask 2> /dev/null || true
+
+# Tap alternative versions
+brew tap caskroom/versions 2> /dev/null || true
+
+# apps
+apps=(
+  appcleaner
+  slack
+)
+#TODO
+#apps=(
+#  iterm2
+#  dropbox
+#  google-chrome
+#  firefox
+#  vagrant
+#  virtualbox
+#  transmit
+#  slack
+#  appcleaner
+#)
+
+# Specify the location of the apps
+appdir="/Applications"
+
+# install apps
+brew cask install --appdir=$appdir ${apps[@]} 2> /dev/null || true
+
+# Remove outdated versions from the cellar
+brew cleanup
