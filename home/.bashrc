@@ -6,6 +6,11 @@ fi
 if type aws > /dev/null 2>&1; then
   complete -C aws_completer aws
 fi
+# tugboat
+#if type tugboat > /dev/null 2>&1 && test -f ~/bash_completion.d/tugboat; then
+#  . ~/bash_completion.d/tugboat
+#fi
+
 
 # prompt
 if [ -f ~/.git-prompt.sh ]; then
