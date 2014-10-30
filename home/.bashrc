@@ -11,6 +11,11 @@ fi
 #  . ~/bash_completion.d/tugboat
 #fi
 
+# direnv
+export EDITOR=vim
+if type direnv > /dev/null 2>&1; then
+  eval "$(direnv hook bash)"
+fi
 
 # prompt
 if [ -f ~/.git-prompt.sh ]; then

@@ -11,11 +11,6 @@ for completion in ${completions[@]}; do
   . $completion
 done
 
-# direnv
-if type direnv > /dev/null 2>&1; then
-  eval "$(direnv hook bash)"
-fi
-
 # color less
 if type source-highlight > /dev/null 2>&1; then
   export LESS='-R'
