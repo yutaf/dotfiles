@@ -40,12 +40,12 @@ highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
 highlight JpSpace cterm=underline ctermfg=7 guifg=7
 
 " tab key
-set tabstop=2
+set tabstop=4
 set expandtab
 
 " autoindent
 "set autoindent
-set shiftwidth=2
+set shiftwidth=4
 
 " autocmd 自動コメントアウト
 autocmd FileType * setlocal formatoptions-=ro
