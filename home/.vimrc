@@ -1,9 +1,6 @@
 " bundle
 source ~/.vimrc.bundle
 
-" emmet
-source ~/.vimrc.emmet
-
 " tabline
 source ~/.vimrc.tabline
 
