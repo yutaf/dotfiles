@@ -34,5 +34,10 @@ call neobundle#end()
 
 filetype plugin indent on
 
+" bundle plugin setting
 " emmet
 source ~/.vimrc.emmet
+" neocomplete
+source ~/.vimrc.neocomplete
+" neosnippet
+source ~/.vimrc.neosnippet
