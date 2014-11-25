@@ -4,6 +4,12 @@ source ~/.vimrc.bundle
 " tabline
 source ~/.vimrc.tabline
 
+" php
+source ~/.vimrc.php
+
+" sql
+source ~/.vimrc.sql
+
 " mouse
 set mouse=n
 set mouse=i
