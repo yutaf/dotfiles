@@ -52,7 +52,6 @@ binaries=(
   hub
   tig
 
-  vim
 
   node
 
@@ -61,6 +60,12 @@ binaries=(
 
 # Install the binaries
 brew install ${binaries[@]} 2> /dev/null || true
+
+#  vim for NeoBundle
+brew install --with-lua
+
+# wireshark
+brew install wireshark --with-qt
 
 # Install homebrew-cask
 brew install caskroom/cask/brew-cask 2> /dev/null || true
