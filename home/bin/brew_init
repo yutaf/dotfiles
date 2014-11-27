@@ -88,6 +88,7 @@ apps=(
 #  transmit
 #  slack
 #  appcleaner
+#  send-to-kindle
 #)
 
 # Specify the location of the apps
