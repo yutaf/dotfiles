@@ -89,3 +89,6 @@ alias uppppp='cd ../../../../..'
 alias ll='ls -l'
 alias lla='ls -al'
 alias lld='ls -ld'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
