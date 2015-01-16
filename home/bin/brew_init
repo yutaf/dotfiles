@@ -92,11 +92,8 @@ apps=(
 #  send-to-kindle
 #)
 
-# Specify the location of the apps
-appdir="/Applications"
-
 # install apps
-brew cask install --appdir=$appdir ${apps[@]} 2> /dev/null || true
+brew cask install ${apps[@]} 2> /dev/null || true
 
 # Remove outdated versions from the cellar
 brew cleanup
