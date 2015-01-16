@@ -5,8 +5,7 @@
 if ! type brew > /dev/null 2>&1; then
   echo "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-  # Update homebrew
+  # Update & Upgrade homebrew
   brew update && brew upgrade
 else
   # Update homebrew
