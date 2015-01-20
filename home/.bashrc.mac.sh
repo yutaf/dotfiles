@@ -1,7 +1,7 @@
 # Path
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH # for Homebrew
 
-if type brew > /dev/null; then
+if type brew > /dev/null 2>&1; then
   # completion
   completions=(
   $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
@@ -24,7 +24,7 @@ fi
 #
 
 # command
-if type gls > /dev/null; then
+if type gls > /dev/null 2>&1; then
   alias ls='gls --color=auto'
 fi
 alias dircolors='gdircolors'
