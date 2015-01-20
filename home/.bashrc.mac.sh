@@ -8,7 +8,7 @@ completions=(
   $(brew --prefix)/etc/bash_completion.d/vagrant
 )
 for completion in ${completions[@]}; do
-  . $completion
+  test -f "$completion" && . $completion
 done
 
 # color less
