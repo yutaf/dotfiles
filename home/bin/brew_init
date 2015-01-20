@@ -73,25 +73,21 @@ brew install caskroom/cask/brew-cask 2> /dev/null || true
 # Tap alternative versions
 brew tap caskroom/versions 2> /dev/null || true
 
-# apps
+# TODO apps
 apps=(
+  iterm2
+  dropbox
+  google-chrome
+  firefox
+  vagrant
+  virtualbox
+  transmit
+  slack
+  skype
   appcleaner
+  send-to-kindle
+  magican
 )
-#TODO
-#apps=(
-#  iterm2
-#  dropbox
-#  google-chrome
-#  firefox
-#  vagrant
-#  virtualbox
-#  transmit
-#  slack
-#  skype
-#  appcleaner
-#  send-to-kindle
-#  magican
-#)
 
 # install apps
 brew cask install ${apps[@]} 2> /dev/null || true
