@@ -1,15 +1,17 @@
 # Path
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH # for Homebrew
 
-# completion
-completions=(
+if type brew > /dev/null; then
+  # completion
+  completions=(
   $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
   $(brew --prefix)/etc/bash_completion
   $(brew --prefix)/etc/bash_completion.d/vagrant
-)
-for completion in ${completions[@]}; do
-  test -f "$completion" && . $completion
-done
+  )
+  for completion in ${completions[@]}; do
+    test -f "$completion" && . $completion
+  done
+fi
 
 # color less
 if type source-highlight > /dev/null 2>&1; then
