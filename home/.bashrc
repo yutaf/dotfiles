@@ -75,7 +75,7 @@ elif [ `uname` = "Linux" ]; then
 fi
 
 # dircolors-solarized
-if [ -r ~/.dircolors-solarized ]; then
+if [ -r ~/.dircolors-solarized ] && type dircolors > /dev/null 2>&1; then
   eval $(dircolors ~/.dircolors-solarized)
 fi
 
