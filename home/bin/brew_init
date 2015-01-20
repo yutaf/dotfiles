@@ -97,7 +97,7 @@ echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> 
 #brew install ${binaries[@]} 2> /dev/null || true
 
 #  vim for NeoBundle
-brew install --with-lua
+brew install vim --with-lua
 
 # wireshark
 brew install wireshark --with-qt
