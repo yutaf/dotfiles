@@ -2,6 +2,8 @@
 
 # Referred from http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac
 
+PARALLEL=10
+
 if ! type brew > /dev/null 2>&1; then
   echo "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -13,53 +15,86 @@ else
 fi
 
 # Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils 2> /dev/null || true
-
+brew install coreutils 2> /dev/null
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils 2> /dev/null || true
-
+brew install findutils 2> /dev/null
 # Install GNU `sed`
-brew install gnu-sed 2> /dev/null || true
+brew install gnu-sed 2> /dev/null
 
 # tap
-taps=(
-  homebrew/dupes
-  homebrew/versions
-  homebrew/completions
-  peco/peco
-)
+TAP_LIST="
+homebrew/dupes
+homebrew/versions
+homebrew/completions
+peco/peco
+"
+echo "$TAP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew tap % 2> /dev/null
 
-for tap in ${taps[@]}; do
-  brew tap $tap 2> /dev/null || true
-done
+#taps=(
+#  homebrew/dupes
+#  homebrew/versions
+#  homebrew/completions
+#  peco/peco
+#)
+#
+#for tap in ${taps[@]}; do
+#  brew tap $tap 2> /dev/null || true
+#done
 
 # Install other useful binaries
-binaries=(
-  bash-completion
-  vagrant-completion
+BINARY_LIST="
+bash-completion
+vagrant-completion
 
-  direnv
-  jq
-  nkf
-  peco
-  pwgen
-  rename
-  rmtrash
-  tree
-  wget
+direnv
+jq
+nkf
+peco
+pwgen
+rename
+rmtrash
+tree
+wget
 
-  git
-  git-flow
-  hub
-  tig
+git
+git-flow
+hub
+tig
 
-  node
+node
 
-  autoconf
-)
+autoconf
+"
 
 # Install the binaries
-brew install ${binaries[@]} 2> /dev/null || true
+echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> /dev/null
+
+#binaries=(
+#  bash-completion
+#  vagrant-completion
+#
+#  direnv
+#  jq
+#  nkf
+#  peco
+#  pwgen
+#  rename
+#  rmtrash
+#  tree
+#  wget
+#
+#  git
+#  git-flow
+#  hub
+#  tig
+#
+#  node
+#
+#  autoconf
+#)
+#
+## Install the binaries
+#brew install ${binaries[@]} 2> /dev/null || true
 
 #  vim for NeoBundle
 brew install --with-lua
@@ -74,23 +109,40 @@ brew install caskroom/cask/brew-cask 2> /dev/null || true
 brew tap caskroom/versions 2> /dev/null || true
 
 # TODO apps
-apps=(
-  iterm2
-  dropbox
-  google-chrome
-  firefox
-  vagrant
-  virtualbox
-  transmit
-  slack
-  skype
-  appcleaner
-  send-to-kindle
-  magican
-)
-
+APP_LIST="
+iterm2
+dropbox
+google-chrome
+firefox
+vagrant
+virtualbox
+transmit
+slack
+skype
+appcleaner
+send-to-kindle
+magican
+"
 # install apps
-brew cask install ${apps[@]} 2> /dev/null || true
+echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install % 2> /dev/null
+
+#apps=(
+#  iterm2
+#  dropbox
+#  google-chrome
+#  firefox
+#  vagrant
+#  virtualbox
+#  transmit
+#  slack
+#  skype
+#  appcleaner
+#  send-to-kindle
+#  magican
+#)
+#
+## install apps
+#brew cask install ${apps[@]} 2> /dev/null || true
 
 # Remove outdated versions from the cellar
 brew cleanup
