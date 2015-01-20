@@ -15,11 +15,11 @@ else
 fi
 
 # Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils 2> /dev/null
+brew install coreutils 2> /dev/null || true
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils 2> /dev/null
+brew install findutils 2> /dev/null || true
 # Install GNU `sed`
-brew install gnu-sed 2> /dev/null
+brew install gnu-sed 2> /dev/null || true
 
 # tap
 TAP_LIST="
@@ -28,7 +28,7 @@ homebrew/versions
 homebrew/completions
 peco/peco
 "
-echo "$TAP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew tap % 2> /dev/null
+echo "$TAP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew tap % 2> /dev/null || true
 
 #taps=(
 #  homebrew/dupes
@@ -67,7 +67,7 @@ autoconf
 "
 
 # Install the binaries
-echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> /dev/null
+echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> /dev/null || true
 
 #binaries=(
 #  bash-completion
@@ -97,10 +97,10 @@ echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> 
 #brew install ${binaries[@]} 2> /dev/null || true
 
 #  vim for NeoBundle
-brew install vim --with-lua
+brew install vim --with-lua 2> /dev/null || true
 
 # wireshark
-brew install wireshark --with-qt
+brew install wireshark --with-qt 2> /dev/null || true
 
 # Install homebrew-cask
 brew install caskroom/cask/brew-cask 2> /dev/null || true
@@ -124,7 +124,7 @@ send-to-kindle
 magican
 "
 # install apps
-echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install % 2> /dev/null
+echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install % 2> /dev/null || true
 
 #apps=(
 #  iterm2
