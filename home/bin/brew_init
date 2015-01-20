@@ -100,7 +100,8 @@ echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> 
 brew install vim --with-lua 2> /dev/null || true
 
 # wireshark
-brew install wireshark --with-qt 2> /dev/null || true
+# takes a long time to install
+#brew install wireshark --with-qt 2> /dev/null || true
 
 # Install homebrew-cask
 brew install caskroom/cask/brew-cask 2> /dev/null || true
