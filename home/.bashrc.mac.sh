@@ -27,7 +27,9 @@ fi
 if type gls > /dev/null 2>&1; then
   alias ls='gls --color=auto'
 fi
-alias dircolors='gdircolors'
+if type gdircolors > /dev/null 2>&1; then
+  alias dircolors='gdircolors'
+fi
 
 # application
 alias cot='open -a CotEditor'
