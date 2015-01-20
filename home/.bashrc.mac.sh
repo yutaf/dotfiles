@@ -17,12 +17,14 @@ if type source-highlight > /dev/null 2>&1; then
   export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s' # installed by brew
 fi
 
-#--
+#
 # shortcut
-#--
+#
 
 # command
-alias ls='gls --color=auto'
+if type gls > /dev/null; then
+  alias ls='gls --color=auto'
+fi
 alias dircolors='gdircolors'
 
 # application
