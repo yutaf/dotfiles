@@ -2,10 +2,38 @@
 
 # Referred from http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac
 
-PARALLEL=20
+PARALLEL=50
+RED=31
+GREEN=32
+YELLOW=33
+BLUE=34
+
+#
+# echo with <color>.
+#
+cecho() {
+    color=$1
+    shift
+    echo -e "\033[${color}m$@\033[m"
+}
+
+#
+# Log <msg>.
+#
+log() {
+  cecho $YELLOW "  ○ $@"
+}
+
+#
+# Warn <msg>.
+#
+warn() {
+  cecho $RED "  ○ $@"
+}
+
 
 if ! type brew > /dev/null 2>&1; then
-  echo "Installing homebrew..."
+  log "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   # Update & Upgrade homebrew
   brew update && brew upgrade
@@ -22,6 +50,8 @@ homebrew/completions
 peco/peco
 caskroom/versions
 "
+
+log "tapping formulas..."
 echo "$TAP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew tap % 2> /dev/null || true
 
 #taps=(
@@ -50,12 +80,9 @@ BINARY_LIST="
 coreutils
 findutils
 gnu-sed
-
 caskroom/cask/brew-cask
-
 bash-completion
 vagrant-completion
-
 direnv
 jq
 nkf
@@ -65,18 +92,16 @@ rename
 rmtrash
 tree
 wget
-
 git
 git-flow
 hub
 tig
-
 node
-
 autoconf
 "
 
 # Install the binaries
+log "installing binaries..."
 echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> /dev/null || true
 
 #binaries=(
@@ -106,6 +131,9 @@ echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> 
 ## Install the binaries
 #brew install ${binaries[@]} 2> /dev/null || true
 
+# Remove outdated versions from the cellar
+brew cleanup
+
 #  vim for NeoBundle
 brew install vim --with-lua 2> /dev/null || true
 # wireshark
@@ -128,6 +156,7 @@ send-to-kindle
 magican
 "
 # install apps
+log "installing apps..."
 echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install % 2> /dev/null || true
 
 #apps=(
@@ -147,6 +176,3 @@ echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install % 2
 #
 ## install apps
 #brew cask install ${apps[@]} 2> /dev/null || true
-
-# Remove outdated versions from the cellar
-brew cleanup
