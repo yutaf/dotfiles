@@ -36,9 +36,13 @@ if ! type brew > /dev/null 2>&1; then
   log "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   # Update & Upgrade homebrew
-  brew update && brew upgrade
+  log "update homebrew..."
+  brew update
+  log "upgrade homebrew..."
+  brew upgrade
 else
   # Update homebrew
+  log "update homebrew..."
   brew update
 fi
 
