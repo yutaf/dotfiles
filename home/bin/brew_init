@@ -40,8 +40,6 @@ else
   brew update
 fi
 
-exit
-
 # tap
 TAP_LIST="
 homebrew/dupes
