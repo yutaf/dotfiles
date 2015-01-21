@@ -135,14 +135,14 @@ echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> 
 ## Install the binaries
 #brew install ${binaries[@]} 2> /dev/null || true
 
-# Remove outdated versions from the cellar
-brew cleanup
-
 #  vim for NeoBundle
 brew install vim --with-lua 2> /dev/null || true
 # wireshark
 # takes tremendous time to install
 #brew install wireshark --with-qt 2> /dev/null || true
+
+# Remove outdated versions from the cellar
+brew cleanup
 
 # TODO apps
 APP_LIST="
