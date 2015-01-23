@@ -38,6 +38,10 @@ if ! type brew > /dev/null 2>&1; then
 else
   log "update homebrew..."
   brew update
+  if type brew-cask > /dev/null 2>&1; then
+    log "upgrade brew-cask..."
+    brew upgrade brew-cask 2> /dev/null || true
+  fi
 fi
 
 # tap
