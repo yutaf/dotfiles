@@ -152,6 +152,7 @@ skype
 appcleaner
 send-to-kindle
 magican
+hoster
 "
 
 log "installing apps..."
@@ -170,6 +171,7 @@ echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install % 2
 #  appcleaner
 #  send-to-kindle
 #  magican
+#  hoster
 #)
 #
 ## install apps
