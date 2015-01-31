@@ -143,8 +143,7 @@ brew link openssl --force
 #  vim for NeoBundle
 brew install vim --with-lua 2> /dev/null || true
 # wireshark
-# takes tremendous time to install
-#brew install wireshark --with-qt 2> /dev/null || true
+brew install wireshark --with-qt 2> /dev/null || true
 
 # Remove outdated versions from the cellar
 brew cleanup
