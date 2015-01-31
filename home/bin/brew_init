@@ -67,80 +67,76 @@ echo "$TAP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew tap % 2> /dev/nu
 #  brew tap $tap 2> /dev/null || true
 #done
 
-## Install GNU core utilities (those that come with OS X are outdated)
-#brew install coreutils 2> /dev/null || true
-## Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-#brew install findutils 2> /dev/null || true
-## Install GNU `sed`
-#brew install gnu-sed 2> /dev/null || true
-
-## Install homebrew-cask
-#brew install caskroom/cask/brew-cask 2> /dev/null || true
-
 # Install other useful binaries
-BINARY_LIST="
-coreutils
-findutils
-gnu-sed
-caskroom/cask/brew-cask
-bash-completion
-vagrant-completion
-direnv
-jq
-nkf
-peco
-pwgen
-rename
-rmtrash
-tree
-wget
-git
-git-flow
-hub
-tig
-openssl
-node
-autoconf
-phantomjs
-"
-
 log "installing binaries..."
-echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> /dev/null || true
 
-exit
+#BINARY_LIST="
+#coreutils
+#findutils
+#gnu-sed
+#caskroom/cask/brew-cask
+#bash-completion
+#vagrant-completion
+#direnv
+#jq
+#nkf
+#peco
+#pwgen
+#rename
+#rmtrash
+#tree
+#wget
+#git
+#git-flow
+#hub
+#tig
+#openssl
+#node
+#autoconf
+#phantomjs
+#"
+#
+#echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> /dev/null || true
 
-#binaries=(
-#  bash-completion
-#  vagrant-completion
-#
-#  direnv
-#  jq
-#  nkf
-#  peco
-#  pwgen
-#  rename
-#  rmtrash
-#  tree
-#  wget
-#
-#  git
-#  git-flow
-#  hub
-#  tig
-#
-#  openssl
-#
-#  node
-#
-#  autoconf
-#  phantomjs
-#)
-#
-## Install the binaries
-#brew install ${binaries[@]} 2> /dev/null || true
 
+# Install GNU core utilities (those that come with OS X are outdated)
+brew install coreutils 2> /dev/null || true
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils 2> /dev/null || true
+# Install GNU `sed`
+brew install gnu-sed 2> /dev/null || true
+# Install homebrew-cask
+brew install caskroom/cask/brew-cask 2> /dev/null || true
+# Install openssl
+brew install openssl
 # link openssl
 brew link openssl --force
+
+binaries=(
+  bash-completion
+  vagrant-completion
+  direnv
+  jq
+  nkf
+  peco
+  pwgen
+  rename
+  rmtrash
+  tree
+  wget
+  git
+  git-flow
+  hub
+  tig
+  node
+  autoconf
+  phantomjs
+)
+
+# Install the binaries
+brew install ${binaries[@]} 2> /dev/null || true
+
+exit
 
 #  vim for NeoBundle
 brew install vim --with-lua 2> /dev/null || true
