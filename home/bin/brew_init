@@ -136,7 +136,7 @@ binaries=(
 # Install the binaries
 brew install ${binaries[@]} 2> /dev/null || true
 
-#  vim for NeoBundle
+# vim for NeoBundle
 brew install vim --with-lua 2> /dev/null || true
 # wireshark
 brew install wireshark --with-qt 2> /dev/null || true
