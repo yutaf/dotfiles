@@ -49,6 +49,7 @@ TAP_LIST="
 homebrew/dupes
 homebrew/versions
 homebrew/completions
+homebrew/homebrew-binary
 peco/peco
 caskroom/versions
 "
@@ -131,6 +132,7 @@ binaries=(
   node
   autoconf
   phantomjs
+  packer
 )
 
 # Install the binaries
