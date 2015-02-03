@@ -1,5 +1,5 @@
 # ex.
-# phpbrew -d install 5.4.36 +apxs2=/opt/apache2.2.29/bin/apxs +dev
+# phpbrew -d install 5.4.36 +neutral +apxs2=/opt/apache2.2.29/bin/apxs +dev
 variants:
   dev:
 # To pass in cli argument;
@@ -19,8 +19,6 @@ variants:
       #      - --with-readline=/usr/local/opt/readline
     xml:
       - --with-libxml-dir=/usr/local/opt/libxml2
-      - --enable-libxml
-      - --enable-xml
     soap:
     zlib:
       - --with-zlib=/usr/local/opt/zlib
@@ -37,8 +35,6 @@ variants:
     curl:
     mysql:
     pdo:
-    json:
-    ctype: # to build phpbrew extension
     my-exif:
       - --enable-exif
     my-config-file-path:
