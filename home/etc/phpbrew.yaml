@@ -1,5 +1,6 @@
 # ex.
 # phpbrew -d install 5.4.36 +neutral +apxs2=/opt/apache2.2.29/bin/apxs +dev
+# phpbrew -d install 5.3.29 +neutral +apxs2=/opt/apache2.2.29/bin/apxs +dev
 variants:
   dev:
 # To pass in cli argument;
