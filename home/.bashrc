@@ -47,13 +47,19 @@ if type hub > /dev/null 2>&1; then
   source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
 fi
 
-# phpenv
-if [ -e $HOME/.phpenv ]; then
-  export PATH="$HOME/.phpenv/bin:$PATH"
-  eval "$(phpenv init -)"
-  # phpenv php takes priority (for iterm)
-  export PATH="$HOME/.phpenv/shims:$PATH"
+# phpbrew
+if type phpbrew > /dev/null 2>&1; then
+  source $HOME/.phpbrew/bashrc
+#  test -f $HOME/bash_completion.d/_phpbrew && . $HOME/bash_completion.d/_phpbrew
 fi
+
+## phpenv
+#if [ -e $HOME/.phpenv ]; then
+#  export PATH="$HOME/.phpenv/bin:$PATH"
+#  eval "$(phpenv init -)"
+#  # phpenv php takes priority (for iterm)
+#  export PATH="$HOME/.phpenv/shims:$PATH"
+#fi
 
 # rbenv
 if [ -e $HOME/.rbenv ]; then
