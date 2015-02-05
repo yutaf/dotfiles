@@ -94,7 +94,9 @@ log "installing binaries..."
 #openssl
 #node
 #autoconf
+#libedit
 #phantomjs
+#packer
 #"
 #
 #echo "$BINARY_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew install % 2> /dev/null || true
@@ -131,6 +133,7 @@ binaries=(
   tig
   node
   autoconf
+  libedit
   phantomjs
   packer
 )
