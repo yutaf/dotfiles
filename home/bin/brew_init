@@ -136,6 +136,8 @@ binaries=(
   libedit
   phantomjs
   packer
+  rbenv
+  ruby-build
 )
 
 # Install the binaries
