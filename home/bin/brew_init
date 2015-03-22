@@ -149,26 +149,34 @@ brew install wireshark --with-qt 2> /dev/null || true
 # Remove outdated versions from the cellar
 brew cleanup
 
-# TODO apps
+# Install apps
+
+# password required for cask
+brew cask install --appdir=/Applications appcleaner
+
 APP_LIST="
-iterm2
-phpstorm
+bettertouchtool
+bittorrent-sync
 dropbox
-google-chrome
+evernote
 firefox
+google-chrome
+google-japanese-ime
+hoster
+iterm2
+magican
+send-to-kindle
+skype
+slack
+totalterminal
+transmit
+phpstorm
 vagrant
 virtualbox
-transmit
-slack
-skype
-appcleaner
-send-to-kindle
-magican
-hoster
 "
 
 log "installing apps..."
-echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install % 2> /dev/null || true
+echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install --appdir=/Applications % 2> /dev/null || true
 
 #apps=(
 #  iterm2
@@ -187,4 +195,4 @@ echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install % 2
 #)
 #
 ## install apps
-#brew cask install ${apps[@]} 2> /dev/null || true
+#brew cask install --appdir=/Applications ${apps[@]} 2> /dev/null || true
