@@ -116,28 +116,29 @@ brew install openssl
 brew link openssl --force
 
 binaries=(
+  autoconf
   bash-completion
-  vagrant-completion
   direnv
-  jq
-  nkf
-  peco
-  pwgen
-  rename
-  rmtrash
-  tree
-  wget
   git
   git-flow
   hub
-  tig
-  node
-  autoconf
+  jq
   libedit
-  phantomjs
+  nkf
+  node
   packer
+  peco
+  phantomjs
+  pwgen
+  rename
+  rmtrash
+  rsense
   rbenv
   ruby-build
+  tig
+  tree
+  vagrant-completion
+  wget
 )
 
 # Install the binaries
