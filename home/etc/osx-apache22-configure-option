@@ -1,0 +1,9 @@
+./configure \
+--prefix=/opt/apache2.2.29 \
+--enable-mods-shared=all \
+--with-z=$(brew --prefix zlib) \
+--enable-proxy \
+--enable-ssl \
+--with-ssl=$(brew --prefix openssl) \
+--with-mpm=prefork \
+--with-pcre=$(brew --prefix pcre) \
