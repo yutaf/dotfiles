@@ -55,10 +55,8 @@ fi
 
 ## phpenv
 #if [ -e $HOME/.phpenv ]; then
-#  export PATH="$HOME/.phpenv/bin:$PATH"
+#  export PATH=$HOME/.phpenv/bin:$HOME/.phpenv/shims:$PATH
 #  eval "$(phpenv init -)"
-#  # phpenv php takes priority (for iterm)
-#  export PATH="$HOME/.phpenv/shims:$PATH"
 #fi
 
 # rbenv
