@@ -43,3 +43,38 @@ variants:
 extensions:
   dev:
     xdebug: stable
+      #--with-readline=$(brew --prefix readline)
+#--with-pcre-regex=$(brew --prefix pcre)
+#--with-pcre-dir=$(brew --prefix pcre)
+#--with-zlib=$(brew --prefix zlib)
+#--with-zlib-dir=$(brew --prefix zlib)
+#--with-libxml-dir=$(brew --prefix libxml2)
+#--with-xsl=/usr
+#--with-mysql=mysqlnd
+#--with-mysqli=mysqlnd
+#--with-pdo-mysql=mysqlnd
+#--with-jpeg-dir=$(brew --prefix jpeg)
+#--with-png-dir=$(brew --prefix libpng)
+#--with-freetype-dir=$(brew --prefix freetype)
+#--enable-gd-native-ttf
+#--enable-gd-jis-conv
+#
+#      - --with-pcre-regex=/usr
+#      - --with-pcre-dir=/usr
+#      - --with-readline=/usr
+#      - --with-libxml-dir=/usr/bin/xml2-config
+#      - --with-mysql=mysqlnd
+#      - --with-mysqli=mysqlnd
+#      - --with-pdo-mysql=mysqlnd
+#      - --with-zlib=/usr
+#      - --with-zlib-dir=/usr
+#      - --with-gd
+#      - --with-jpeg-dir=/usr
+#      - --with-png-dir=/usr
+#      - --with-freetype-dir=/usr
+#      - --enable-gd-native-ttf
+#      - --enable-gd-jis-conv
+#      - --with-openssl=/usr
+#      - --with-mcrypt=/usr
+#      - --enable-bcmath
+#      - --with-curl
