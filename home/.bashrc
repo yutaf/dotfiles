@@ -60,7 +60,7 @@ fi
 #fi
 
 # rbenv
-if type rbenv > /dev/null 2>&1; then
+if [ -d $HOME/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
   # to use rbenv ruby
