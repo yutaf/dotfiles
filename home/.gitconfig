@@ -34,3 +34,6 @@
 [pager]
 	diff = diff-highlight | less -rX
 	log = diff-highlight | less -rX
+[user]
+	name = yutaf
+	email = yutafuji2008@gmail.com
