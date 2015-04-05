@@ -122,6 +122,7 @@ binaries=(
   git
   git-flow
   hub
+  hugo
   jq
   libedit
   nkf
