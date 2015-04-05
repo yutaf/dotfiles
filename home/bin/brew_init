@@ -131,6 +131,7 @@ binaries=(
   peco
   phantomjs
   pwgen
+  rails-completion
   rename
   rmtrash
   rsense

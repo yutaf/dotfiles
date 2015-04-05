@@ -19,6 +19,11 @@ if type source-highlight > /dev/null 2>&1; then
   export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s' # installed by brew
 fi
 
+# rails_completion
+if [ -f `brew --prefix`/etc/bash_completion.d/rails ]; then
+  source `brew --prefix`/etc/bash_completion.d/rails
+fi
+
 #
 # shortcut
 #
