@@ -43,6 +43,9 @@ source ~/.vimrc.neocomplete
 " neosnippet
 source ~/.vimrc.neosnippet
 
+" -------------------------------
+" livedown
+" -------------------------------
 " should markdown preview get shown automatically upon opening markdown buffer
 let g:livedown_autorun = 0
 
