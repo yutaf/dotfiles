@@ -162,6 +162,7 @@ brew cask install --appdir=/Applications appcleaner
 APP_LIST="
 bettertouchtool
 bittorrent-sync
+coteditor
 dropbox
 evernote
 firefox
