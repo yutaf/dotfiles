@@ -160,6 +160,7 @@ brew cleanup
 brew cask install --appdir=/Applications appcleaner
 
 APP_LIST="
+adobe-air
 bettertouchtool
 bittorrent-sync
 coteditor
