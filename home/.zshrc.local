@@ -1,0 +1,11 @@
+#
+# PATH
+#
+
+# apache
+export PATH=/opt/apache2.2.29/bin:$PATH
+
+# go
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH

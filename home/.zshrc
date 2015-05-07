@@ -1,77 +1,103 @@
-# ライン操作
-bindkey -e
-# 自動補完を有効にする
-autoload -U compinit; compinit
-## cdの設定
-# ディレクトリ名だけで移動する。
-setopt auto_cd
-# 自動でpushdする
-setopt auto_pushd
-# pushd したとき、ディレクトリがすでにスタックに含まれていればスタックに追加しない
-setopt pushd_ignore_dups
+# Character encoding
+export LANG=ja_JP.UTF-8
 
-# -------------------------------------
-# 環境変数
-# -------------------------------------
+# Path
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH # for Homebrew
 
-# SSHで接続した先で日本語が使えるようにする
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+# completion
+if [ -e /usr/local/share/zsh-completions ]; then
+  fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+autoload -U compinit
+compinit
 
-# エディタ
-#export EDITOR=/usr/local/bin/vim
+# antigen
+if test -f $HOME/.antigen/antigen.zsh; then
+  source "$HOME/.antigen/antigen.zsh"
 
-# -------------------------------------
-# プロンプト
-# -------------------------------------
+  # oh-my-zsh
+  antigen-use oh-my-zsh
+  antigen-bundle arialdomartini/oh-my-git
+  antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
 
-# プロンプトが表示されるたびにプロンプト文字列を評価、置換する
-setopt prompt_subst
-# 右プロンプトを最終行のみ出力する
-#setopt transient_rprompt
-
-autoload -U promptinit; promptinit
-autoload -Uz colors; colors
-autoload -Uz vcs_info
-
-# begin VCS
-zstyle ":vcs_info:*" enable git svn hg bzr
-zstyle ":vcs_info:*" formats "(%s)-[%b]"
-zstyle ":vcs_info:*" actionformats "(%s)-[%b|%a]"
-zstyle ":vcs_info:(svn|bzr):*" branchformat "%b:r%r"
-zstyle ":vcs_info:bzr:*" use-simple true
-
-zstyle ":vcs_info:*" max-exports 6
-
-autoload -Uz is-at-least
-if is-at-least 4.3.10; then
-    zstyle ":vcs_info:git:*" check-for-changes true # commitしていないのをチェック
-    zstyle ":vcs_info:git:*" stagedstr "+"
-    zstyle ":vcs_info:git:*" unstagedstr "*"
-    zstyle ":vcs_info:git:*" formats "(%b %c%u)"
-    zstyle ":vcs_info:git:*" actionformats "(%s)-[%b|%a] %c%u"
+  antigen-apply
 fi
 
-function vcs_prompt_info() {
-    LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && echo -n " $vcs_info_msg_0_"
+# prompt
+#DEFAULT=%F{green}^_^%f
+#ERROR=%F{red}O_O%f
+DEFAULT='\U2601 '
+ERROR='\U26A1 '
+omg_ungit_prompt="%(?.${DEFAULT}.${ERROR}) %B%n:%~%b
+$ "
+omg_second_line="%(?.${DEFAULT}.${ERROR}) %B%n:%~%b
+$ "
+RPROMPT=
+
+# color man
+export MANPAGER='less -R'
+man() {
+  env \
+      LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+      LESS_TERMCAP_md=$(printf "\e[1;31m") \
+      LESS_TERMCAP_me=$(printf "\e[0m") \
+      LESS_TERMCAP_se=$(printf "\e[0m") \
+      LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+      LESS_TERMCAP_ue=$(printf "\e[0m") \
+      LESS_TERMCAP_us=$(printf "\e[1;32m") \
+      man "$@"
 }
-# end VCS
 
-OK="^_^ "
-NG="◞‸◟ "
-
-PROMPT="
-"
-PROMPT+="%(?.%F{green}$OK%f.%F{red}$NG%f)"
-PROMPT+="("
-if [ $(uname) = "Linux" ];then
-    PROMPT+="%n@%m:"
+# hub
+if type hub > /dev/null 2>&1; then
+  eval "$(hub alias -s)"
 fi
-PROMPT+="%~" # current directory
-PROMPT+="\$(vcs_prompt_info)"
-PROMPT+=")"
-PROMPT+="
-"
 
-PROMPT+="%% "
+# phpbrew
+if type phpbrew > /dev/null 2>&1; then
+  source $HOME/.phpbrew/bashrc
+#  test -f $HOME/bash_completion.d/_phpbrew && . $HOME/bash_completion.d/_phpbrew
+fi
+
+# rbenv
+if [ -d $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+  # to use rbenv ruby
+  export PATH=$HOME/.rbenv/shims:$PATH
+fi
+
+# direnv
+export EDITOR=vim
+if type direnv > /dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# color less
+if type source-highlight > /dev/null 2>&1; then
+  export LESS='-R'
+  export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s' # installed by brew
+fi
+
+# dircolors-solarized
+if type gls > /dev/null 2>&1; then
+  alias ls='gls --color=auto'
+fi
+if [ -r ~/.dircolors-solarized ] && type gdircolors > /dev/null 2>&1; then
+  eval $(gdircolors ~/.dircolors-solarized)
+fi
+
+# for local own environment
+if [ -f $HOME/.zshrc.local ]; then
+  . $HOME/.zshrc.local
+fi
+
+# alias
+alias cot='open -a CotEditor'
+alias preview='open -a Preview'
+alias keynote='open -a Keynote'
+alias excel='open -a Microsoft\ Excel.app'
+alias powerpoint='open -a Microsoft\ PowerPoint.app'
