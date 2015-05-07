@@ -32,6 +32,8 @@ omg_ungit_prompt="%(?.${DEFAULT}.${ERROR}) %B%n:%~%b
 $ "
 omg_second_line="%(?.${DEFAULT}.${ERROR}) %B%n:%~%b
 $ "
+PROMPT="
+$PROMPT"
 RPROMPT=
 
 # color man
