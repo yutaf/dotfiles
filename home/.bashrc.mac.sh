@@ -25,7 +25,7 @@ if [ -f `brew --prefix`/etc/bash_completion.d/rails ]; then
 fi
 
 #
-# shortcut
+# alias
 #
 
 # command
