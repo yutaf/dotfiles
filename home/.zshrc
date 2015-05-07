@@ -50,11 +50,6 @@ man() {
       man "$@"
 }
 
-# hub
-if type hub > /dev/null 2>&1; then
-  eval "$(hub alias -s)"
-fi
-
 # phpbrew
 if type phpbrew > /dev/null 2>&1; then
   source $HOME/.phpbrew/bashrc
