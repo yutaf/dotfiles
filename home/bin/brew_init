@@ -141,6 +141,8 @@ binaries=(
   tree
   vagrant-completion
   wget
+  zsh
+  zsh-completions
 )
 
 # Install the binaries
