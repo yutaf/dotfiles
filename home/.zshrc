@@ -5,9 +5,9 @@ export LANG=ja_JP.UTF-8
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH # for Homebrew
 
 # completion
-if [ -e /usr/local/share/zsh-completions ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
-fi
+#if [ -e /usr/local/share/zsh-completions ]; then
+#  fpath=(/usr/local/share/zsh-completions $fpath)
+#fi
 autoload -Uz compinit
 compinit
 
@@ -19,6 +19,8 @@ if test -f $HOME/.antigen/antigen.zsh; then
   antigen-use oh-my-zsh
   antigen-bundle arialdomartini/oh-my-git
   antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+  # zsh-completions
+  antigen bundle zsh-users/zsh-completions
 
   antigen-apply
 fi
