@@ -8,7 +8,7 @@ export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH # for Homebrew
 if [ -e /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi
-autoload -U compinit
+autoload -Uz compinit
 compinit
 
 # antigen
