@@ -12,6 +12,7 @@ autoload -Uz compinit
 compinit
 
 # antigen
+test -d $HOME/.antigen || git clone https://github.com/zsh-users/antigen.git $HOME/.antigen
 if test -f $HOME/.antigen/antigen.zsh; then
   source "$HOME/.antigen/antigen.zsh"
 
