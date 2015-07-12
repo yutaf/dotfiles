@@ -1,5 +1,5 @@
 # Character encoding
-export LANG=ja_JP.UTF-8
+#export LANG=ja_JP.UTF-8
 
 # Path
 export PATH=~/bin:~/local/bin:/usr/local/bin:/usr/local/sbin:$PATH
