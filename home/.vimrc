@@ -23,7 +23,7 @@ set backspace=start,eol
 " colorscheme
 syntax enable
 set background=dark
-if isdirectory("~/.vim/bundle/vim-colors-solarized")
+if isdirectory(expand('~/.vim/bundle/vim-colors-solarized'))
   colorscheme solarized
 endif
 
