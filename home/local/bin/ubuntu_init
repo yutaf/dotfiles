@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get update
-apt-get install -y ruby
+apt-get install -y ruby zsh
 gem install --no-ri --no-rdoc homesick
 homesick clone yutaf/dotfiles
 homesick link -s dotfiles
@@ -9,3 +9,5 @@ aptitude install -y vim-gnome
 vim +NeoBundleInstall +qall!
 curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 mod +x /usr/local/bin/docker-compose
+chsh -s /usr/bin/zsh
+zsh -l
