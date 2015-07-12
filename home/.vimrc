@@ -1,14 +1,14 @@
 " bundle
-source ~/.vimrc.bundle
+source ~/vimrc/.vimrc.bundle
 
 " tabline
-source ~/.vimrc.tabline
+source ~/vimrc/.vimrc.tabline
 
 " php
-source ~/.vimrc.php
+source ~/vimrc/.vimrc.php
 
 " sql
-source ~/.vimrc.sql
+source ~/vimrc/.vimrc.sql
 
 " mouse
 set mouse=n

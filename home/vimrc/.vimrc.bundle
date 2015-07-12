@@ -39,11 +39,11 @@ filetype plugin indent on
 
 " bundle plugin setting
 " emmet
-source ~/.vimrc.emmet
+source ~/vimrc/.vimrc.emmet
 " neocomplete
-source ~/.vimrc.neocomplete
+source ~/vimrc/.vimrc.neocomplete
 " neosnippet
-source ~/.vimrc.neosnippet
+source ~/vimrc/.vimrc.neosnippet
 
 " -------------------------------
 " livedown
