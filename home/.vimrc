@@ -23,7 +23,9 @@ set backspace=start,eol
 " colorscheme
 syntax enable
 set background=dark
-colorscheme solarized
+if !isdirectory("~/.vim/bundle/vim-colors-solarized")
+  colorscheme solarized
+endif
 
 " Syntax Highlight for BLACK background color
 "syntax on
