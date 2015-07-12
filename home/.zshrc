@@ -2,7 +2,7 @@
 export LANG=ja_JP.UTF-8
 
 # Path
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH # for Homebrew
+export PATH=~/bin:~/local/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # completion
 #if [ -e /usr/local/share/zsh-completions ]; then
