@@ -96,6 +96,10 @@ if [ -f $HOME/.zshrc.local ]; then
   . $HOME/.zshrc.local
 fi
 
+# for dduportal/boot2docker NFS sync
+# https://github.com/Parallels/boot2docker-vagrant-box#tips--tricks
+export B2D_NFS_SYNC=1
+
 # alias
 alias cot='open -a CotEditor'
 alias preview='open -a Preview'
