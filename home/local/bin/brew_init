@@ -172,6 +172,7 @@ firefox
 google-chrome
 google-japanese-ime
 hoster
+inkscape
 iterm2
 kindle
 magican
@@ -189,6 +190,7 @@ transmit
 phpstorm
 vagrant
 virtualbox
+xquartz
 "
 
 log "installing apps..."
