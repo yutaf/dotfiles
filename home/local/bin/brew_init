@@ -38,10 +38,6 @@ if ! type brew > /dev/null 2>&1; then
 else
   log "update homebrew..."
   brew update
-  if type brew-cask > /dev/null 2>&1; then
-    log "upgrade brew-cask..."
-    brew upgrade brew-cask 2> /dev/null || true
-  fi
 fi
 
 # tap
@@ -51,7 +47,6 @@ homebrew/versions
 homebrew/completions
 homebrew/homebrew-binary
 peco/peco
-caskroom/versions
 "
 
 log "tapping formulas..."
@@ -75,7 +70,6 @@ log "installing binaries..."
 #coreutils
 #findutils
 #gnu-sed
-#caskroom/cask/brew-cask
 #bash-completion
 #vagrant-completion
 #direnv
@@ -108,8 +102,6 @@ brew install coreutils 2> /dev/null || true
 brew install findutils 2> /dev/null || true
 # Install GNU `sed`
 brew install gnu-sed 2> /dev/null || true
-# Install homebrew-cask
-brew install caskroom/cask/brew-cask 2> /dev/null || true
 # Install openssl
 brew install openssl
 # link openssl
