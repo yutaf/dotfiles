@@ -86,7 +86,6 @@ log "installing binaries..."
 #hub
 #tig
 #openssl
-#node
 #autoconf
 #libedit
 #phantomjs
@@ -118,7 +117,6 @@ binaries=(
   jq
   libedit
   nkf
-  node
   packer
   peco
   phantomjs
