@@ -205,3 +205,6 @@ echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install --a
 #
 ## install apps
 #brew cask install --appdir=/Applications ${apps[@]} 2> /dev/null || true
+
+log "installing vagrant plugins"
+vagrant plugin install dotenv vagrant-digitalocean
