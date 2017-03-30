@@ -85,7 +85,6 @@ binaries=(
   pwgen
   tig
   tree
-  vagrant-completion
   zsh
   zsh-completions
 )
