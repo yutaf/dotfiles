@@ -18,13 +18,13 @@ if test -f $HOME/.antigen/antigen.zsh; then
   source "$HOME/.antigen/antigen.zsh"
 
   # oh-my-zsh
-  antigen-use oh-my-zsh
-  antigen-bundle arialdomartini/oh-my-git
+  antigen use oh-my-zsh
+  antigen bundle arialdomartini/oh-my-git
   antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
   # zsh-completions
   antigen bundle zsh-users/zsh-completions
 
-  antigen-apply
+  antigen apply
 fi
 
 # prompt
