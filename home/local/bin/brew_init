@@ -109,7 +109,7 @@ brew cleanup
 ###########################################################################
 # oh-my-git
 
-# You have to install the fonts
+# You have to install the fonts from https://github.com/gabrielelana/awesome-terminal-fonts/tree/patching-strategy/patched
 # https://github.com/arialdomartini/oh-my-git#troubleshooting
 # Then set the fonts in terminal setting
 ###########################################################################
