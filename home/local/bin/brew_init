@@ -99,8 +99,19 @@ brew install ${binaries[@]} 2> /dev/null || true
 brew cleanup
 
 ###########################################################################
+# Terminal Color
+
+# solarized
 # You have to clone solarized from https://github.com/altercation/solarized
 # And set them in terminal, iterm2
+###########################################################################
+
+###########################################################################
+# oh-my-git
+
+# You have to install the fonts
+# https://github.com/arialdomartini/oh-my-git#troubleshooting
+# Then set the fonts in terminal setting
 ###########################################################################
 
 # Install apps
