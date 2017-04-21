@@ -86,7 +86,6 @@ binaries=(
   tig
   tree
   zsh
-  zsh-completions
 )
 
 # Install the binaries
