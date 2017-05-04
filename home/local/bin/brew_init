@@ -113,7 +113,13 @@ brew cleanup
 
 # solarized
 # You have to clone solarized from https://github.com/altercation/solarized
-# And set them in terminal, iterm2
+# Set them in terminal, iterm2
+# Don't use intellij settings in this repository
+###########################################################################
+
+###########################################################################
+# Intellij Editor Color
+# https://github.com/jkaving/intellij-colors-solarized
 ###########################################################################
 
 ###########################################################################
