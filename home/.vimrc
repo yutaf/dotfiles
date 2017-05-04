@@ -41,8 +41,8 @@ set number
 " For special characters ex. TAB, WHITE SPACE...
 set lcs=tab:>.,trail:_,extends:\
 set list
-highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
-highlight JpSpace cterm=underline ctermfg=7 guifg=7
+"highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
+"highlight JpSpace cterm=underline ctermfg=7 guifg=7
 
 " tab key
 set tabstop=2
