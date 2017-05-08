@@ -78,6 +78,7 @@ brew link openssl --force
 
 binaries=(
   direnv
+  git-lfs
   hub
   hugo
   jq
