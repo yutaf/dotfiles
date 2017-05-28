@@ -133,49 +133,20 @@ brew cleanup
 # "SourceCodePro+Powerline+Awesome+Regular.ttf" is good
 ###########################################################################
 
-# Install apps
+###########################################################################
+# vagrant plugins
 
-# password required for cask
-#brew cask install --appdir=/Applications firefox
+#vagrant plugin install dotenv vagrant-digitalocean
+###########################################################################
 
-#APP_LIST="
-#bettertouchtool
-#bittorrent-sync
-#coteditor
-#dropbox
-#google-chrome
-#google-japanese-ime
-#iterm2
-#kindle
-#opera
-#totalterminal
-#transmit
-#vagrant
-#virtualbox
-#virtualbox-extension-pack
-#"
+###########################################################################
+# nvm
 
-#log "installing apps..."
-#echo "$APP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew cask install --appdir=/Applications % 2> /dev/null || true
+# https://github.com/creationix/nvm
+###########################################################################
 
-#apps=(
-#  iterm2
-#  dropbox
-#  google-chrome
-#  firefox
-#  vagrant
-#  virtualbox
-#  transmit
-#  slack
-#  skype
-#  appcleaner
-#  send-to-kindle
-#  magican
-#  hoster
-#)
-#
-## install apps
-#brew cask install --appdir=/Applications ${apps[@]} 2> /dev/null || true
+###########################################################################
+# livedown
 
-log "installing vagrant plugins"
-vagrant plugin install dotenv vagrant-digitalocean
+# https://github.com/shime/livedown
+###########################################################################
