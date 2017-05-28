@@ -84,6 +84,7 @@ binaries=(
   jq
   nkf
   pwgen
+  rename
   tig
   tree
   zsh
