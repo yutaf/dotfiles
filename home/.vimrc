@@ -58,6 +58,10 @@ set statusline=%F%r%h%= " ステータスラインの内容
 " alphabet increment
 set nf=alpha
 
+" omni completion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 " sql
 let g:sql_type_default='mysql'
 
