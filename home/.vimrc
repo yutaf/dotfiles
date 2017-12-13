@@ -121,3 +121,9 @@ let php_baselib = 1
 let php_htmlInStrings = 1
 let php_noShortTags = 1
 let php_parent_error_close = 1
+
+" -------------------------------
+" vim-instant-markdown
+" -------------------------------
+let g:instant_markdown_autostart = 0
+nmap gm :InstantMarkdownPreview<CR>
