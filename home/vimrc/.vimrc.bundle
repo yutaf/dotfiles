@@ -29,7 +29,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'shime/vim-livedown'
+"NeoBundle 'shime/vim-livedown'
 NeoBundle 'saltstack/salt-vim'
 
 call neobundle#end()
@@ -48,12 +48,12 @@ source ~/vimrc/.vimrc.neosnippet
 " livedown
 " -------------------------------
 " should markdown preview get shown automatically upon opening markdown buffer
-let g:livedown_autorun = 0
+"let g:livedown_autorun = 0
 
 " should the browser window pop-up upon previewing
-let g:livedown_open = 1
+"let g:livedown_open = 1
 
 " the port on which Livedown server will run
-let g:livedown_port = 1337
+"let g:livedown_port = 1337
 
-nmap gm :LivedownPreview<CR>
+"nmap gm :LivedownPreview<CR>
