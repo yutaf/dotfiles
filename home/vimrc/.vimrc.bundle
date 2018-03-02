@@ -44,6 +44,8 @@ source ~/vimrc/.vimrc.emmet
 source ~/vimrc/.vimrc.neocomplete
 " neosnippet
 source ~/vimrc/.vimrc.neosnippet
+" .vimrc.golang
+source ~/vimrc/.vimrc.golang
 
 " -------------------------------
 " livedown
