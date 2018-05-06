@@ -127,3 +127,8 @@ let php_parent_error_close = 1
 " -------------------------------
 let g:instant_markdown_autostart = 0
 nmap gm :InstantMarkdownPreview<CR>
+
+""""""""""""""""
+" c
+""""""""""""""""
+autocmd FileType c setlocal shiftwidth=4 tabstop=4
