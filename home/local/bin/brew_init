@@ -136,7 +136,7 @@ brew cleanup
 ###########################################################################
 # vagrant plugins
 
-#vagrant plugin install dotenv vagrant-digitalocean
+#vagrant plugin install dotenv vagrant-digitalocean vagrant-aws
 ###########################################################################
 
 ###########################################################################
