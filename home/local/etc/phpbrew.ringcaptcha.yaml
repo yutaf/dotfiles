@@ -1,13 +1,37 @@
 # PhpBrew Usage
-phpbrew init -c 
 
-# phpbrew -d install 5.4.36 +neutral +apxs2=/opt/apache2.2.29/bin/apxs +dev
-# phpbrew -d install 5.3.29 +neutral +apxs2=/opt/apache2.2.29/bin/apxs +dev
+# - Restore icu4c to the old version to build php
+# 
+# References; 
+# <https://qiita.com/sizuhiko/items/aebdbb05f0824cae4bdd> 
+# <https://github.com/php-build/php-build/pull/463>
+# <https://qiita.com/KyoheiG3/items/912bcc27462871487845>
+# 
+# ```
+# $ cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula
+# $ git checkout ab72fee8166749231036a4476aaba30df9619800 icu4c.rb
+# $ brew unlink icu4c
+# $ HOMEBREW_NO_AUTO_UPDATE=1 brew reinstall icu4c
+# ```
+# 
+# brew install \
+#   libxml2 \
+#   icu4c \
+#   jpeg \
+#   gd \
+#   mcrypt
+
+# phpbrew init -c ~/local/etc/phpbrew.ringcaptcha.yaml
+
+# Dryrun
+# phpbrew -d install -d 5.4.45 +neutral +dev
+# Install
+# phpbrew -d install --stdout 5.4.45 +neutral +dev
+
 variants:
   dev:
 # To pass in cli argument;
 # +apxs2=/opt/apache2.2.29/bin/apxs
-    bcmath:
     mbstring:
     intl:
     icu:
@@ -23,25 +47,36 @@ variants:
     xml:
 #      - --with-libxml-dir=/usr/local/opt/libxml2
     soap:
+    mysql:
+    my-without-pdo-sqlite:
+      - --without-pdo-sqlite
+    my-without-sqlite3:
+      - --without-sqlite3
     zlib:
 #      - --with-zlib=/usr/local/opt/zlib
 #      - --with-zlib-dir=/usr/local/opt/zlib
-    gd:
+    openssl:
+    mcrypt:
+    bcmath:
+    curl:
+    zip:
+    my-disable-cgi:
+      - --disable-cgi
+    calendar:
+    my-disable-short-tags:
+      - --disable-short-tags
+#    gd:
 #      - --with-gd
 #      - --with-jpeg-dir=/usr/local/opt/jpeg
 #      - --with-png-dir=/usr/local/opt/libpng
 #      - --with-freetype-dir=/usr/local/opt/freetype
 #      - --enable-gd-native-ttf
 #      - --enable-gd-jis-conv
-    openssl:
-    mcrypt:
-    curl:
-    mysql:
-    pdo:
-    my-exif:
-      - --enable-exif
-    my-without-pdo-sqlite:
-      - --without-pdo-sqlite
+#    my-exif:
+#      - --enable-exif
+    pcntl:
+
+#    pdo:
 #    my-config-file-path:
 #      - --with-config-file-path=/Users/yutaf/Sync/www/php.ini
 #extensions:
