@@ -77,14 +77,14 @@ binaries=(
   direnv
   git-lfs
   hub
-  hugo
+#  hugo
   jq
-  nkf
+#  nkf
   pwgen
-  rename
+#  rename
   tig
   tree
-  zsh
+#  zsh
 )
 
 # Install the binaries
