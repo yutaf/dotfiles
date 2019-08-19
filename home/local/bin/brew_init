@@ -28,7 +28,7 @@ log() {
 # Warn <msg>.
 #
 warn() {
-  cecho $RED "  ○ $@"
+  cecho $RED "$@"
 }
 
 
