@@ -38,15 +38,15 @@ if ! type brew > /dev/null 2>&1; then
 fi
 
 # tap
-TAP_LIST="
-homebrew/dupes
-homebrew/versions
-homebrew/completions
-homebrew/homebrew-binary
-"
+#TAP_LIST="
+#homebrew/dupes
+#homebrew/versions
+#homebrew/completions
+#homebrew/homebrew-binary
+#"
 
-log "tapping formulas..."
-echo "$TAP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew tap % 2> /dev/null || true
+#log "tapping formulas..."
+#echo "$TAP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew tap % 2> /dev/null || true
 
 #taps=(
 #  homebrew/dupes
@@ -62,16 +62,16 @@ echo "$TAP_LIST" | xargs -t -n $PARALLEL -P $PARALLEL -I % brew tap % 2> /dev/nu
 log "installing binaries..."
 
 
-# Install GNU core utilities (those that come with OS X are outdated)
+# Install GNU core utilities (those that come with OS X are outdated) in order to install gls which is needed for dircolors-solarized
 brew install coreutils 2> /dev/null || true
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils 2> /dev/null || true
+#brew install findutils 2> /dev/null || true
 # Install GNU `sed`
 brew install gnu-sed 2> /dev/null || true
-# Install openssl
-brew install openssl
+# Install openssl (Is this necessary for phpbrew?)
+#brew install openssl
 # link openssl
-brew link openssl --force
+#brew link openssl --force
 
 binaries=(
   direnv
