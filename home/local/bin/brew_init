@@ -94,6 +94,9 @@ brew install ${binaries[@]} 2> /dev/null || true
 # https://stackoverflow.com/questions/55780111/how-to-install-vim-with-lua-using-brew
 #brew install vim
 
+# Packer
+#brew install packer
+
 # Remove outdated versions from the cellar
 brew cleanup
 
