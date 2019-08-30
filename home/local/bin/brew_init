@@ -90,8 +90,9 @@ binaries=(
 # Install the binaries
 brew install ${binaries[@]} 2> /dev/null || true
 
-# vim for NeoBundle
-#brew install vim --with-lua 2> /dev/null || true
+# vim for NeoBundle, clipboard(--with-lua is no longer needed)
+# https://stackoverflow.com/questions/55780111/how-to-install-vim-with-lua-using-brew
+#brew install vim
 
 # Remove outdated versions from the cellar
 brew cleanup
