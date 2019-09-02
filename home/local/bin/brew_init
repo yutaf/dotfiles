@@ -97,6 +97,10 @@ brew install ${binaries[@]} 2> /dev/null || true
 # Packer
 #brew install packer
 
+# sshrc
+# https://github.com/Russell91/sshrc
+#brew install sshrc
+
 # Remove outdated versions from the cellar
 brew cleanup
 
