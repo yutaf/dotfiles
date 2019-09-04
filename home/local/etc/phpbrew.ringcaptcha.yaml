@@ -1,5 +1,9 @@
 # PhpBrew Usage
 
+##################
+# Dependencies
+##################
+
 # - Restore icu4c to the old version to build php
 # 
 # References; 
@@ -8,8 +12,20 @@
 # <https://qiita.com/KyoheiG3/items/912bcc27462871487845>
 # If /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula does not have the old commit for icu4c, execute git fetch --unshallow
 # <https://codechord.com/2018/09/solution_for_php_error_after_upgrade_homebrew/>
+#
+# Or you can install necessary icu4c directly
+# https://docs.brew.sh/Tips-N'-Tricks#installing-previous-versions-of-formulae
+# https://github.com/phpbrew/phpbrew/issues/901#issuecomment-341818381
+#
+# brew install --force https://raw.githubusercontent.com/Homebrew/homebrew-core/ab72fee8166749231036a4476aaba30df9619800/Formula/icu4c.rb
 # 
 # ```
+
+# A. Install old icu4c directly
+# $ cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula
+# $ brew install --force https://raw.githubusercontent.com/Homebrew/homebrew-core/ab72fee8166749231036a4476aaba30df9619800/Formula/icu4c.rb
+
+# B. Check out old version
 # $ cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula
 # $ git fetch --unshallow
 # $ git checkout ab72fee8166749231036a4476aaba30df9619800 icu4c.rb
@@ -17,14 +33,11 @@
 # $ HOMEBREW_NO_AUTO_UPDATE=1 brew reinstall icu4c
 # ```
 
-##################
-# Dependencies
-##################
-# 
+# Other Dependencies
+
 # Mojave (10.14.5)
 # brew install \
 #   libxml2 \
-#   icu4c \
 #   pcre \
 #   curl \
 #   libiconv \
@@ -33,7 +46,6 @@
 # Yosemite?
 # brew install \
 #   libxml2 \
-#   icu4c \
 #   jpeg \
 #   gd \
 #   mcrypt
@@ -56,6 +68,7 @@ variants:
     mbstring:
     intl:
     icu:
+      - --with-icu-dir=/usr/local/Cellar/icu4c/58.2/
 #      - --with-icu-dir=/usr/local/opt/icu4c
     gettext:
 #      - --with-gettext=/usr/local/opt/gettext
