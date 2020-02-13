@@ -83,7 +83,7 @@ binaries=(
   pwgen
 #  rename
   tig
-  tree
+#  tree
 #  zsh
 )
 
