@@ -60,3 +60,13 @@ source ~/vimrc/.vimrc.golang
 "let g:livedown_port = 1337
 
 "nmap gm :LivedownPreview<CR>
+
+" -------------------------------
+" syntastic
+" -------------------------------
+" How to avoid python f-strings giving a syntax error?
+" For syntastic
+" https://github.com/vim-syntastic/syntastic/issues/2242
+" https://github.com/vim-syntastic/syntastic#faqpython
+let g:syntastic_python_checkers = ['python']
+let g:syntastic_python_python_exec = 'python3'
