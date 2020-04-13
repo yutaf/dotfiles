@@ -136,6 +136,7 @@ brew cleanup
 # https://github.com/arialdomartini/oh-my-git#troubleshooting
 # Then set the fonts in terminal setting
 # "SourceCodePro+Powerline+Awesome+Regular.ttf" is good
+# Set it in Preferences > Profiles > Text > Font
 ###########################################################################
 
 ###########################################################################
