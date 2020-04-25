@@ -145,6 +145,8 @@ brew cleanup
 # vim-instant-markdown
 
 # https://github.com/suan/vim-instant-markdown
+# How to install npm
+# `$ brew install npm`
 ###########################################################################
 
 ###########################################################################
