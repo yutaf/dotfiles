@@ -106,6 +106,7 @@ brew cleanup
 
 ###########################################################################
 # Change default shell to zsh
+# Update 2020-04-25; This is no longer necessary as of Mac OS Catalina.
 
 # chsh -s $(which zsh)
 
@@ -117,6 +118,7 @@ brew cleanup
 
 ###########################################################################
 # Terminal Color
+# Update 2020-04-25; You don't have to clone solarized because it is preinstalled in iTerm
 
 # solarized
 # You have to clone solarized from https://github.com/altercation/solarized
@@ -140,6 +142,12 @@ brew cleanup
 ###########################################################################
 
 ###########################################################################
+# vim-instant-markdown
+
+# https://github.com/suan/vim-instant-markdown
+###########################################################################
+
+###########################################################################
 # vagrant plugins
 
 #vagrant plugin install dotenv vagrant-digitalocean vagrant-aws
@@ -155,12 +163,6 @@ brew cleanup
 # nvm
 
 # https://github.com/creationix/nvm
-###########################################################################
-
-###########################################################################
-# vim-instant-markdown
-
-# https://github.com/suan/vim-instant-markdown
 ###########################################################################
 
 ###########################################################################
