@@ -121,8 +121,8 @@ brew cleanup
 # Update 2020-04-25; You don't have to clone solarized because it is preinstalled in iTerm
 
 # solarized
-# You have to clone solarized from https://github.com/altercation/solarized
-# Set them in terminal, iterm2
+# Clone solarized from https://github.com/altercation/solarized
+# Set it on terminal(iTerm2)
 # Don't use intellij settings in this repository
 ###########################################################################
 
