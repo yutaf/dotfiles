@@ -76,7 +76,8 @@ brew install gnu-sed 2> /dev/null || true
 binaries=(
   direnv
   git-lfs
-  hub
+#  hub # deprecated
+  gh
 #  hugo
   jq
 #  nkf
