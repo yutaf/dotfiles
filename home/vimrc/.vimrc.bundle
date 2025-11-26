@@ -26,7 +26,7 @@ NeoBundle 'vim-scripts/closetag.vim'
 "NeoBundle 'nishigori/vim-php-dictionary'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Shougo/neocomplete'
+"NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 "NeoBundle 'shime/vim-livedown'
@@ -42,7 +42,7 @@ filetype plugin indent on
 " emmet
 source ~/vimrc/.vimrc.emmet
 " neocomplete
-source ~/vimrc/.vimrc.neocomplete
+"source ~/vimrc/.vimrc.neocomplete
 " neosnippet
 source ~/vimrc/.vimrc.neosnippet
 " .vimrc.golang
