@@ -1,1 +1,8 @@
 let g:go_fmt_autosave = 1
+
+augroup go_vet_on_save
+    autocmd!
+    autocmd BufWritePost *.go :GoVet
+    "autocmd BufWritePost *.go silent GoVet
+    "autocmd BufWritePost *.go silent! GoVet
+augroup END
