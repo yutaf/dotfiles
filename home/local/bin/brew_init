@@ -86,6 +86,11 @@ binaries=(
   tig
 #  tree
 #  zsh
+  neovim
+  node
+  ripgrep
+  fd
+  tree-sitter-cli
 )
 
 # Install the binaries
