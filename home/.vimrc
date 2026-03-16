@@ -65,9 +65,9 @@ set omnifunc=syntaxcomplete#Complete
 " sql
 let g:sql_type_default='mysql'
 
-""""""""""""""""
+" -------------------------------
 " tabline
-""""""""""""""""
+" -------------------------------
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
@@ -113,9 +113,9 @@ map <silent> [Tag]n :tabnext<CR>
 " tp 前のタブ
 map <silent> [Tag]p :tabprevious<CR>
 
-""""""""""""""""
+" -------------------------------
 " php
-""""""""""""""""
+" -------------------------------
 let php_sql_query = 1
 let php_baselib = 1
 let php_htmlInStrings = 1
@@ -128,7 +128,7 @@ let php_parent_error_close = 1
 let g:instant_markdown_autostart = 0
 nmap gm :InstantMarkdownPreview<CR>
 
-""""""""""""""""
+" -------------------------------
 " c
-""""""""""""""""
+" -------------------------------
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
