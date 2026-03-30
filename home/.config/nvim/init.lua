@@ -1,5 +1,6 @@
 vim.cmd("source ~/vimrc/common.vim")
 
+-- set leader key to space
 vim.g.mapleader = " "
 
 vim.opt.termguicolors = true
