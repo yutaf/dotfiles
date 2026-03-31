@@ -1,8 +1,3 @@
-" bundle
-if filereadable(expand('~/vimrc/.vimrc.bundle'))
-  source ~/vimrc/.vimrc.bundle
-endif
-
 " mouse
 set mouse=n
 set mouse=i
@@ -16,34 +11,18 @@ set backspace=start,eol
 " colorscheme
 syntax enable
 set background=dark
-if isdirectory(expand('~/.vim/bundle/vim-colors-solarized'))
-  colorscheme solarized
-endif
-
-" Syntax Highlight for BLACK background color
-"syntax on
-"highlight Normal ctermbg=black ctermfg=grey
-"highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
-"highlight CursorLine term=none cterm=none ctermfg=black ctermbg=grey
 
 set cursorline
-
-" Show line nunber
 set number
 
 " For special characters ex. TAB, WHITE SPACE...
 set lcs=tab:>.,trail:_,extends:\
 set list
-"highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
-"highlight JpSpace cterm=underline ctermfg=7 guifg=7
 
 " tab key
 set tabstop=2
-set expandtab
-
-" autoindent
-"set autoindent
 set shiftwidth=2
+set expandtab
 
 " autocmd 自動コメントアウト
 autocmd FileType * setlocal formatoptions-=ro
@@ -51,9 +30,10 @@ autocmd FileType * setlocal formatoptions-=ro
 " 検索の折り返しをしない
 set nowrapscan
 
-" ステータスラインを表示
-set laststatus=2 " ステータスラインを常に表示
-set statusline=%F%r%h%= " ステータスラインの内容
+" ステータスラインを常に表示
+set laststatus=2
+" ステータスラインの内容
+set statusline=%F%r%h%=
 
 " alphabet increment
 set nf=alpha
@@ -74,12 +54,12 @@ function! s:SID_PREFIX()
 endfunction
 
 " Set tabline.
-function! s:my_tabline()  "{{{
+function! s:my_tabline()
   let s = ''
   for i in range(1, tabpagenr('$'))
     let bufnrs = tabpagebuflist(i)
-    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
-    let no = i  " display 0-origin tabpagenr.
+    let bufnr = bufnrs[tabpagewinnr(i) - 1]
+    let no = i
     let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
     let title = fnamemodify(bufname(bufnr), ':t')
     let title = '[' . title . ']'
@@ -91,13 +71,15 @@ function! s:my_tabline()  "{{{
   endfor
   let s .= '%#TabLineFill#%T%=%#TabLine#'
   return s
-endfunction "}}}
+endfunction
+
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
-set showtabline=2 " 常にタブラインを表示
+" 常にタブラインを表示
+set showtabline=2
 
 " The prefix key.
-nnoremap    [Tag]   <Nop>
-nmap    t [Tag]
+nnoremap [Tag] <Nop>
+nmap t [Tag]
 " Tab jump
 " t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
 for n in range(1, 9)
@@ -132,3 +114,8 @@ nmap gm :InstantMarkdownPreview<CR>
 " c
 " -------------------------------
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
+
+" emmet
+let g:user_emmet_settings = {
+\   'lang' : 'ja'
+\ }
