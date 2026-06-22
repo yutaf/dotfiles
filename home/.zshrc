@@ -3,7 +3,7 @@ export LANG=en_US.UTF-8
 #export LANG=ja_JP.UTF-8
 
 # Path
-export PATH=~/bin:~/local/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=~/bin:~/local/bin:~/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # completion
 #if [ -e /usr/local/share/zsh-completions ]; then
