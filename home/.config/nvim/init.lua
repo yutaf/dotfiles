@@ -4,6 +4,8 @@ vim.cmd("source ~/vimrc/common.vim")
 vim.g.mapleader = " "
 
 vim.opt.termguicolors = true
+vim.opt.completeopt = { "menu", "menuone", "noselect", "popup" }
+
 vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/site")
 vim.env.PATH = "/usr/local/bin:" .. vim.env.PATH
 
@@ -53,6 +55,20 @@ require("lazy").setup({
   { "hashivim/vim-terraform" },
 
   { "github/copilot.vim" },
+
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", branch = "master" },
+    },
+    build = "make tiktoken",
+    opts = {
+      window = {
+        layout = "vertical",
+        width = 0.4,
+      },
+    },
+  },
 
   { "neovim/nvim-lspconfig" },
 
