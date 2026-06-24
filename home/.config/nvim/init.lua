@@ -54,21 +54,21 @@ require("lazy").setup({
   { "saltstack/salt-vim" },
   { "hashivim/vim-terraform" },
 
-  { "github/copilot.vim" },
+  -- { "github/copilot.vim" },
 
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "nvim-lua/plenary.nvim", branch = "master" },
-    },
-    build = "make tiktoken",
-    opts = {
-      window = {
-        layout = "vertical",
-        width = 0.4,
-      },
-    },
-  },
+  -- {
+  --   "CopilotC-Nvim/CopilotChat.nvim",
+  --   dependencies = {
+  --     { "nvim-lua/plenary.nvim", branch = "master" },
+  --   },
+  --   build = "make tiktoken",
+  --   opts = {
+  --     window = {
+  --       layout = "vertical",
+  --       width = 0.4,
+  --     },
+  --   },
+  -- },
 
   { "neovim/nvim-lspconfig" },
 
