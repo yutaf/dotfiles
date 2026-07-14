@@ -81,6 +81,23 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
   },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = {
+      "MarkdownPreview",
+      "MarkdownPreviewStop",
+      "MarkdownPreviewToggle",
+    },
+    ft = { "markdown" },
+    build = "cd app && npx --yes yarn install",
+    init = function()
+      vim.g.mkdp_auto_start = 0
+      vim.g.mkdp_auto_close = 1
+      vim.g.mkdp_echo_preview_url = 1
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+  },
 }, {
   rocks = {
     enabled = false,
@@ -135,3 +152,7 @@ vim.keymap.set("n", "<C-p>", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+vim.keymap.set("n", "gm", "<cmd>MarkdownPreviewToggle<CR>", {
+  silent = true,
+  desc = "Markdown Preview",
+})
